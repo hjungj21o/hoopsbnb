@@ -12,6 +12,7 @@ class CreateArenas < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_index :arenas, :address, :gm_id
+    add_index :arenas, :address
+    add_index :arenas, :gm_id
   end
 end

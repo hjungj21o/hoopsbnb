@@ -22,8 +22,6 @@ class User < ApplicationRecord
         class_name: :Review
 
 
-    #FIGVAPER
-
     def self.find_by_credentials(username, password)
         user = user.find_by(username: username)
         return nil if !@user
