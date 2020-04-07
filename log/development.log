@@ -2091,3 +2091,10 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 386ms (Views: 383.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-04-07 13:34:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 76ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
