@@ -4,12 +4,11 @@ class Api::SessionsController < ApplicationController
             params[:user][:username], 
             params[:user][:password]
         )
-
         if @user
             login!(@user)
             render 'api/users/show'
         else
-            render json: ["user does not exist"], status: 401
+            render json: ["Invalid username and/or password"], status: 401
         end
     end
 
