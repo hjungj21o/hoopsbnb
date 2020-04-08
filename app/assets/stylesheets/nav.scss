@@ -1,0 +1,21 @@
+ /* Nav */
+ .nav {
+     display: flex;
+     justify-content: space-between;
+     padding: 0px 5px;
+ }
+
+ .login-signup {
+     display: inline-block;
+     padding: 0px 5px;
+ }
+
+ .form-button {
+     font-family: inherit;
+     border: 0;
+ }
+
+ .form-button:hover {
+     border-bottom: 1px black solid;
+     font-weight: bold;
+ }

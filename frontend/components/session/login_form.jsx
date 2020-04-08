@@ -9,7 +9,7 @@ class LoginForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleErrors = this.handleErrors.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
     }
 
     componentDidMount() {
@@ -19,10 +19,15 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
-        debugger;
-        if (this.props.errors.length === 0) this.props.closeModal();
-        
+        //this.props.processForm(user) returns a promise, so we can use .then on succession to invoke closeModal
+        this.props.processForm(user)
+            .then(() => this.props.closeModal());
+    }
+
+    handleDemoLogin(e) {
+        e.preventDefault();
+        this.props.loginDemoUser()
+            .then(() => this.props.closeModal());
     }
 
     update(field) {
@@ -41,10 +46,13 @@ class LoginForm extends React.Component {
     }
 
     render() {
-        // debugger;
         return (
             <div>
                 {this.handleErrors()}
+                <div>
+                    <button className="demo-login-button" onClick={this.handleDemoLogin}>Demo Login</button>
+                </div>
+                
                 <form onSubmit={this.handleSubmit}>
                     <div onClick={this.props.closeModal} className="modal-close-x">X</div>
                     <br></br>

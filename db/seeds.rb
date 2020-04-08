@@ -11,11 +11,11 @@
 # Review.destroy_all
 User.destroy_all
 
-u1 = User.create(username: "ballislife", email: "ballislife@gmail.com", first_name: "Haejun", last_name: "Chung")
-u2 = User.create(username: "thegoat23", email: "thegoat23@airjordan.com", first_name: "Michael", last_name: "Jordan")
-u3 = User.create(username: "earthisflat", email: "kyrieirving@brooklynnets.com", first_name: "Kyrie", last_name: "Irving")
-u4 = User.create(username: "halfcourt3", email: "stephencurry30@gsw.com", first_name: "Stephen", last_name: "Curry")
-u5 = User.create(username: "eurosteps", email: "jamesharden@houston.com", first_name: "James", last_name: "Harden")
+u1 = User.create(username: "ballislife", password: "starwars123", email: "ballislife@gmail.com", first_name: "Haejun", last_name: "Chung")
+u2 = User.create(username: "thegoat23", password: "chicagobulls", email: "thegoat23@airjordan.com", first_name: "Michael", last_name: "Jordan")
+u3 = User.create(username: "earthisflat", password: "brooklynnets", email: "kyrieirving@brooklynnets.com", first_name: "Kyrie", last_name: "Irving")
+u4 = User.create(username: "halfcourt3", password: "goldenstate", email: "stephencurry30@gsw.com", first_name: "Stephen", last_name: "Curry")
+u5 = User.create(username: "eurosteps", password: "houstonrockets", email: "jamesharden@houston.com", first_name: "James", last_name: "Harden")
 
 
 # r1 = Review.create()
