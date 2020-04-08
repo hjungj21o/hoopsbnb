@@ -12,7 +12,7 @@ class SignUpForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleErrors = this.handleErrors.bind(this);
+        this.handleErrors = this.handleErrors.bind(this);
     }
 
     handleSubmit(e) {
@@ -21,77 +21,100 @@ class SignUpForm extends React.Component {
         user.first_name = user.firstName
         user.last_name = user.lastName
 
-        debugger;
+        // debugger;
         this.props.processForm(user);
+        this.props.closeModal();
     }
 
     update(field) {
         return e => this.setState( { [field]: e.currentTarget.value } );
     }
 
-    // handleErrors() {
-    //     let errors = this.props.errors.map((error, i) => {
-    //         return <li key={`error-${i}`}>{error}</li>
-    //     })
-    //     return (
-    //         <ul>
-    //             {errors}
-    //         </ul>
-    //     );
-    // }
+    handleErrors() {
+        let errors = this.props.errors.map((error, i) => {
+            return <li key={`error-${i}`}>{error}</li>
+        })
+        return (
+            <ul>
+                {errors}
+            </ul>
+        );
+    }
 
     render(){
-        debugger;
+        // debugger;
         return (
             <div>
+                {this.handleErrors()}
                 <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Username
-                        <input 
-                        type="text" 
-                        value={this.state.username} 
-                        onChange={this.update('username')}
-                        name="username"
-                        />
-                    </label>
-                    <label>
-                        Password
-                        <input type="text" 
-                        value={this.state.password} 
-                        onChange={this.update('password')}
-                        name="password"
-                        />
-                    </label>
-                    <label>
-                        E-mail
-                        <input 
-                        type="text" 
-                        value={this.state.email} 
-                        onChange={this.update('email')}
-                        name="email"
-                        />
-                    </label>
-                    <label>
-                        First Name
-                        <input 
-                        type="text" 
-                        value={this.state.firstName} 
-                        onChange={this.update('firstName')}
-                        name="firstName"
-                        />
-                    </label>
-                    <label>
-                        Last Name
-                        <input 
-                        type="text" 
-                        value={this.state.lastName} 
-                        onChange={this.update('lastName')}
-                        name="lastName"
-                        />
-                    </label>
-                    <input type="submit" value={this.props.formType} />
+                    <div onClick={this.props.closeModal} className="modal-close-x">X</div>
+                    <br></br>
+                        <div>
+                            <label className="modal-container">
+                                <input 
+                                className="signup-form"
+                                type="text"
+                                placeholder='username' 
+                                value={this.state.username} 
+                                onChange={this.update('username')}
+                                name="username"
+                                />
+                            </label>
+                        </div>
+                        <div>
+                            <label className="modal-container">
+                                <input 
+                                className="signup-form"
+                                type="text"
+                                placeholder='password'
+                                value={this.state.password} 
+                                onChange={this.update('password')}
+                                name="password"
+                                />
+                            </label>
+                        </div>
+                        <div>
+                            <label className="modal-container">
+                                <input 
+                                className="signup-form"
+                                type="email" 
+                                placeholder='e-mail'
+                                value={this.state.email} 
+                                onChange={this.update('email')}
+                                name="email"
+                                />
+                            </label>
+                        </div>
+                        <div>
+                            <label className="modal-container">
+                                <input 
+                                className="signup-form"
+                                type="text" 
+                                placeholder='first name'
+                                value={this.state.firstName} 
+                                onChange={this.update('firstName')}
+                                name="firstName"
+                                />
+                            </label>
+                        </div>
+                        <div>
+                            <label className="modal-container">
+                                <input 
+                                className="signup-form"
+                                type="text" 
+                                value={this.state.lastName}
+                                placeholder='last name' 
+                                onChange={this.update('lastName')}
+                                name="lastName"
+                                />
+                            </label>
+                        </div>
+                        <input type="submit" value={this.props.formType} className="modal-submit-button" />
 
                 </form>
+                <div className="session-link">
+                    <p className="session-link-text">Already have a Treebnb account? {this.props.otherForm}</p> 
+                </div>
             </div>
         )
     }

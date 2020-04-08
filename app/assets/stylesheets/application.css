@@ -13,3 +13,107 @@
  *= require_tree .
  *= require_self
  */
+
+ html {
+    font-family: Scada;
+}
+
+ /* Nav */
+ header {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .nav {
+     display: inline-block;
+     padding: 0px 5px;
+ }
+
+ .login-signup {
+     display: inline-block;
+     padding: 0px 5px;
+ }
+
+ .form-button {
+     font-family: inherit;
+     border: 0;
+ }
+
+ .form-button:hover {
+     border-bottom: 1px black solid;
+     font-weight: bold;
+ }
+
+
+ /* Modals */
+
+ .modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    width: 300px;
+    height: 250px;
+}
+
+.modal-close-x {
+    top: -10px;
+    cursor: pointer;
+    float: right;
+    opacity: .5;
+    display: flex;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+.signup-form {
+    display: flex;
+    padding: 5px 5px;
+    margin: 0 auto;
+    width: 65%;
+}
+
+.modal-container {
+    display: block;
+    margin: 5px auto;
+}
+
+.modal-submit-button {
+    display: block;
+    margin: 10px auto;
+    width: 65%;
+    background-color: rgb(0, 86, 163);
+    color: white;
+    padding: 5px 5px;
+}
+
+.session-link {
+    display: flex;
+}
+
+.session-link-text {
+    font-family: Scada;
+    font-size: 10px;
+}
+
+.session-link-button {
+    font-size: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0px;
+    border: none;
+}
+ 

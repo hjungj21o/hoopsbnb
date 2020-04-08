@@ -33,17 +33,19 @@
 // export default Greeting;
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ( { logout, currentUser} ) => {
+const Greeting = ( { logout, currentUser, openModal } ) => {
+    // debugger;
     const sessionLinks = () => (
-        <nav className="login-signup">
-            <Link to="/login">Login</Link>
-            
-            <Link to="/signup">Sign up!</Link>
-        </nav>
+        <div className="nav">
+            <nav className="login-signup">
+                <button className="form-button" onClick={() => openModal('login')}>Login</button>
+                
+                <button className="form-button" onClick={() => openModal('signup')}>Signup</button>
+            </nav>
+        </div>
     );
     const personalGreeting = () => (
         <hgroup className="header-group">
@@ -51,7 +53,7 @@ const Greeting = ( { logout, currentUser} ) => {
             <button className="header-button" onClick={logout}>Log Out</button>
         </hgroup>
     );
-    debugger;
+    // debugger;
 
     return currentUser ? personalGreeting() : sessionLinks();
 };

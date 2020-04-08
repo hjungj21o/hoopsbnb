@@ -1,17 +1,15 @@
 import React from "react";
 import { Route, Link } from "react-router-dom";
-import SignUpFormContainer from './session/signup_form_container';
 import GreetingContainer from './nav/greeting_container'
-import LoginFormContainer from './session/login_form_container'
+import Modal from '../components/modal/modal';
 
 const App = () => (
     <div>
+        <Modal />
         <header>
-            <h1>Hoopsbnb Hello</h1>
+            <nav className="nav">Hoopsbnb</nav>
             <GreetingContainer />
         </header>
-        <Route path="/login" component={LoginFormContainer} />
-        <Route path="/signup" component={SignUpFormContainer} />
 
     </div>
 );

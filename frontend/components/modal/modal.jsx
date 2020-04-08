@@ -1,8 +1,8 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import LoginFormContainer from '../session_form/login_form_container';
-import SignupFormContainer from '../session_form/signup_form_container';
+import LoginFormContainer from '../session/login_form_container';
+import SignupFormContainer from '../session/signup_form_container';
 
 function Modal({ modal, closeModal }) {
     if (!modal) {
@@ -29,6 +29,7 @@ function Modal({ modal, closeModal }) {
 }
 
 const mapStateToProps = state => {
+    // debugger;
     return {
         modal: state.ui.modal
     };
