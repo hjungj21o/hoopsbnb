@@ -7,8 +7,9 @@ const App = () => (
     <div>
         <Modal />
         <header>
-            <nav className="nav">Hoopsbnb</nav>
+            <nav className="nav">Hoopsbnb
             <GreetingContainer />
+            </nav>
         </header>
 
     </div>
