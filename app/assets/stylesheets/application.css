@@ -19,15 +19,16 @@
 }
 
  /* Nav */
- header {
+ .nav {
      display: flex;
      justify-content: space-between;
- }
-
- .nav {
-     display: inline-block;
      padding: 0px 5px;
  }
+
+ /* .nav {
+     display: inline-block;
+     
+ } */
 
  .login-signup {
      display: inline-block;
@@ -116,4 +117,10 @@
     padding: 0px;
     border: none;
 }
+
+body {
+    background-image: url("td_garden.jpg");
+    background-size: cover;
+}
+
  

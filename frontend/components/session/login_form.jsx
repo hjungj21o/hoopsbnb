@@ -12,6 +12,10 @@ class LoginForm extends React.Component {
         // this.handleErrors = this.handleErrors.bind(this);
     }
 
+    componentDidMount() {
+        this.props.clearErrors();
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -34,7 +38,6 @@ class LoginForm extends React.Component {
                 {errors}
             </ul>
         );
-        errors = [];
     }
 
     render() {
