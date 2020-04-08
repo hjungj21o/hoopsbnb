@@ -25,9 +25,9 @@ class SignUpForm extends React.Component {
         user.first_name = user.firstName
         user.last_name = user.lastName
 
-        // debugger;
-        this.props.processForm(user);
-        this.props.closeModal();
+
+        this.props.processForm(user)
+            .then(() => this.props.closeModal());
     }
 
     update(field) {
@@ -46,7 +46,6 @@ class SignUpForm extends React.Component {
     }
 
     render(){
-        // debugger;
         return (
             <div>
                 {this.handleErrors()}
