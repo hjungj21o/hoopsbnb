@@ -113,7 +113,7 @@ class SignUpForm extends React.Component {
 
                 </form>
                 <div className="session-link">
-                    <p className="session-link-text">Already have a Treebnb account? {this.props.otherForm}</p> 
+                    <p className="session-link-text">Already have a Hoopsbnb account? {this.props.otherForm}</p> 
                 </div>
             </div>
         )

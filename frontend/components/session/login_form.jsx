@@ -34,7 +34,6 @@ class LoginForm extends React.Component {
                 {errors}
             </ul>
         );
-        errors = [];
     }
 
     render() {
