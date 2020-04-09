@@ -3,18 +3,17 @@
      display: flex;
      align-items: center;
      justify-content: space-between;
-     height: 50px;
+     height: 80px;
      position: fixed;
      top: 0;
      left: 0;
      z-index: 9999;
      width: 100%;
      background-color: white;
-     border-bottom: 10px pink solid;
+     border-bottom: 1px rgb(97, 97, 97) solid;
  }
 
  .login-signup {
-     display: inline-block;
      padding: 0px 5px;
  }
 
@@ -34,6 +33,3 @@
      font-weight: bold;
  }
 
- .footer-cat {
-     margin: 
- }
