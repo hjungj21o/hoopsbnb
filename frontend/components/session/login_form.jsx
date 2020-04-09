@@ -48,16 +48,20 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
-                {this.handleErrors()}
-                <div>
-                    <button className="demo-login-button" onClick={this.handleDemoLogin}>Demo Login</button>
-                </div>
-                
-                <form onSubmit={this.handleSubmit}>
+                <form className="modal-form" onSubmit={this.handleSubmit}>
                     <div onClick={this.props.closeModal} className="modal-close-x">X</div>
-                    <br></br>
-                    <div>
-                        <label className="modal-container">
+                        {this.handleErrors()}
+                        <br></br>
+                        <div className="demo-login-button">
+                            <button onClick={this.handleDemoLogin}>Demo Login</button>
+                        </div>
+                        <br />
+                    <div className="hr-line">
+                        <hr />
+                        OR
+                        <hr />
+                    </div>
+                        <div className="modal-container">
                             <input
                                 className="signup-form"
                                 type="text"
@@ -66,10 +70,8 @@ class LoginForm extends React.Component {
                                 onChange={this.update('username')}
                                 name="username"
                             />
-                        </label>
-                    </div>
-                    <div>
-                        <label className="modal-container">
+                        </div>
+                        <div className="modal-container">
                             <input
                                 className="signup-form"
                                 type="text"
@@ -78,13 +80,12 @@ class LoginForm extends React.Component {
                                 onChange={this.update('password')}
                                 name="password"
                             />
-                        </label>
-                    </div>
+                        </div>
                     <input type="submit" value={this.props.formType} className="modal-submit-button" />
+                    <div className="session-link">
+                        <p className="session-link-text">Don't have an account? {this.props.otherForm}</p>
+                    </div>
                 </form>
-                <div className="session-link">
-                    <p className="session-link-text">Don't have an account? {this.props.otherForm}</p>
-                </div>
             </div>
         )
     }

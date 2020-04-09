@@ -1,5 +1,6 @@
 class Arena < ApplicationRecord
-    validates :address, :city, :description, :price, :lat, :long, presence: true
+    validates :name, :address, :gm_id, :city, :description, :price, :lat, :lng, presence: true
+    
 
     belongs_to :gm,
         primary_key: :id,

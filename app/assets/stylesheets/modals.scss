@@ -15,57 +15,87 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px;
     background-color: white;
     border-radius: 5px;
-    width: 300px;
-    height: 250px;
+    width: 550px;
+    height: 500px;
+}
+
+.modal-form {
+    height: 100%;
+    padding: 25px 35px;
 }
 
 .modal-close-x {
-    top: -10px;
+    display: block;
     cursor: pointer;
-    float: right;
+    text-align: right;
     opacity: .5;
-    display: flex;
-    font-size: 13px;
+    font-size: 25px;
     font-family: sans-serif;
+    padding: 5px;
+    width: 100%;
 }
 
 .signup-form {
+    font-size: 22px;
     display: flex;
-    padding: 5px 5px;
-    margin: 0 auto;
-    width: 65%;
+    width: 100%;
+    padding: 10px 0px;
 }
-
+.modal-form input {
+    margin-bottom: 10px;
+}
 .modal-container {
-    display: block;
-    margin: 5px auto;
+    width: 100%;
+    height: 100%;
 }
 
 .modal-submit-button {
-    display: block;
-    margin: 10px auto;
-    width: 65%;
+    font-size: 22px;
+    width: 100%;
     background-color: rgb(0, 86, 163);
     color: white;
-    padding: 5px 5px;
-}
-
-.session-link {
-    display: flex;
+    height: 50px;
+    border-radius: 5px;
 }
 
 .session-link-text {
-    font-family: Scada;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .session-link-button {
-    font-size: 10px;
     cursor: pointer;
     font-family: inherit;
     padding: 0px;
     border: none;
+    font-size: 20px;
 }
+
+
+.demo-login-button button {
+    font-size: 22px;
+    width: 100%;
+    background-color: rgb(0, 86, 163);
+    color: white;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.hr-line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 5px 0 10px 0;
+    color: #A2A2A2;
+    font-size: 15px;
+    align-items: center;
+}
+
+hr {
+    width: 46%;
+    border: 0.5px solid #DDDDDD;
+}
+

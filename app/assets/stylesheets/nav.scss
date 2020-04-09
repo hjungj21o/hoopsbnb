@@ -1,8 +1,16 @@
  /* Nav */
- .nav {
+ .fixed-nav-bar {
      display: flex;
+     align-items: center;
      justify-content: space-between;
-     padding: 0px 5px;
+     height: 50px;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 9999;
+     width: 100%;
+     background-color: white;
+     border-bottom: 10px pink solid;
  }
 
  .login-signup {
@@ -11,11 +19,17 @@
  }
 
  .form-button {
-     font-family: inherit;
-     border: 0;
+     padding: 0px 10px 0px 10px;
+     font-size: 18px;
  }
 
  .form-button:hover {
-     border-bottom: 1px black solid;
+     padding-bottom: 10px;
+     border-bottom: 0.5px black solid;
+ }
+
+ .logo {
+     text-decoration: none;
+     font-size: 40px;
      font-weight: bold;
  }

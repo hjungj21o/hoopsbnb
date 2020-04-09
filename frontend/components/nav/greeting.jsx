@@ -23,22 +23,24 @@ class Greeting extends React.Component {
 
         const personalGreeting = () => (
             <div className="header-group">
-                <h2 className="header-name">{currentUser.first_name}!</h2>
+                <h2 className="header-name">{currentUser.first_name}</h2>
                 <button className="header-button" onClick={logout}>Log Out</button>
             </div>
         );
-        debugger;
         const whichUser = currentUser ? personalGreeting() : sessionLinks();
 
         return (
-            <nav className="nav">
-                <div>
-                    Hoopsbnb
+            <>
+            <nav className="fixed-nav-bar">
+                <div className="nav-left">
+                    <Link to="/" className="logo">Hoopsbnb</Link>
                 </div>
-                <div>
+                <div className="nav-right">
                     {whichUser}
                 </div>
             </nav>
+            
+            </>
         );
     }
 }

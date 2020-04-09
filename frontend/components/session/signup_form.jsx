@@ -49,10 +49,9 @@ class SignUpForm extends React.Component {
         return (
             <div>
                 {this.handleErrors()}
-                <form onSubmit={this.handleSubmit}>
+                <form className="modal-form" onSubmit={this.handleSubmit}>
                     <div onClick={this.props.closeModal} className="modal-close-x">X</div>
                     <br></br>
-                        <div>
                             <label className="modal-container">
                                 <input 
                                 className="signup-form"
@@ -63,8 +62,6 @@ class SignUpForm extends React.Component {
                                 name="username"
                                 />
                             </label>
-                        </div>
-                        <div>
                             <label className="modal-container">
                                 <input 
                                 className="signup-form"
@@ -75,8 +72,6 @@ class SignUpForm extends React.Component {
                                 name="password"
                                 />
                             </label>
-                        </div>
-                        <div>
                             <label className="modal-container">
                                 <input 
                                 className="signup-form"
@@ -87,8 +82,6 @@ class SignUpForm extends React.Component {
                                 name="email"
                                 />
                             </label>
-                        </div>
-                        <div>
                             <label className="modal-container">
                                 <input 
                                 className="signup-form"
@@ -99,8 +92,6 @@ class SignUpForm extends React.Component {
                                 name="firstName"
                                 />
                             </label>
-                        </div>
-                        <div>
                             <label className="modal-container">
                                 <input 
                                 className="signup-form"
@@ -111,13 +102,11 @@ class SignUpForm extends React.Component {
                                 name="lastName"
                                 />
                             </label>
-                        </div>
                         <input type="submit" value={this.props.formType} className="modal-submit-button" />
-
+                        <div className="session-link">
+                            <p className="session-link-text">Already have a Hoopsbnb account? {this.props.otherForm}</p> 
+                        </div>
                 </form>
-                <div className="session-link">
-                    <p className="session-link-text">Already have a Hoopsbnb account? {this.props.otherForm}</p> 
-                </div>
             </div>
         )
     }

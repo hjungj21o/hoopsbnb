@@ -12,11 +12,64 @@
  *
  *= require_tree .
  *= require_self
+ * ---- Colors ---- 
+ * 
+ * Rausch [pink] #FF5A5F
+ * Babu [green] #00A699
+ * Dark [green] #008489
+ * Arches [orange] #FC642D
+ * Hof [dark gray] #484848
+ * Foggy [light gray] #767676
+ * Very Light [grey] #D3D3D3
+ * Light Teal [calender-date :hover] #CCEEEB
+ * Teal [date-picker :focused] #99EDE7
  */
 
- html {
-    font-family: Scada;
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
 }
 
+html {
+    font-family: Scada;
+    height: 100%;
+}
 
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.app-container {
+    height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
  

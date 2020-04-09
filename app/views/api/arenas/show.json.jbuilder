@@ -1,0 +1,1 @@
+json.partial! "/api/arenas/arena", arena: @arena
