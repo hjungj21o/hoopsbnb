@@ -1,9 +1,14 @@
  /* Nav */
+ 
+ .yjchunjae {
+     margin-top: 79px;
+ }
+ 
  .fixed-nav-bar {
      display: flex;
      align-items: center;
      justify-content: space-between;
-     height: 80px;
+     height: 79px;
      position: fixed;
      top: 0;
      left: 0;
@@ -23,8 +28,9 @@
  }
 
  .form-button:hover {
-     padding-bottom: 10px;
-     border-bottom: 0.5px black solid;
+     border-radius: 20px;
+     height: 50px;
+     background-color: rgba(223, 223, 223, 0.612)
  }
 
  .logo {

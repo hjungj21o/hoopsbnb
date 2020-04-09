@@ -1,7 +1,7 @@
 import { RECEIVE_ARENAS, RECEIVE_ARENA } from '../actions/arena_actions';
 
 const arenasReducer = ( oldState = {}, action ) => {
-    Object.freeze(state);
+    Object.freeze(oldState);
     switch (action.type) {
         case RECEIVE_ARENAS:
             return action.arenas;

@@ -1,4 +1,6 @@
 .splash-container {
+    display: flex;
+    position: relative;
     padding: 150px 0px 0px 90px;
     background-image: image-url("td_garden.jpg");
     background-size: cover;
