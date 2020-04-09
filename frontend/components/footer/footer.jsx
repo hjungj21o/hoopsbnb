@@ -34,7 +34,7 @@ const Footer = () => {
                 </ul>
             </section>
             <section className="about">
-                <h4 className="footer-title">Support</h4>
+                <h4 className="footer-title">SUPPORT</h4>
                 <ul className="footer-cat">
                     <li>Help Center</li>
                     <li>FAQs</li>
