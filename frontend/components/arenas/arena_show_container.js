@@ -1,16 +1,17 @@
 import { connect } from 'react-redux';
-import ArenaShow from './arena_index';
+import ArenaShow from './arena_show';
 import { fetchArena } from '../../actions/arena_actions';
 
-const msp = state => {
+const msp = (state, ownProps) => {
+    debugger;
     return ({
-        [state.arena.id]: state.arena
+        arena: state.entities.arenas[ownProps.match.params.arenaId]
     });
 };
 
 const mdp = dispatch => {
     return ({
-        fetchUser: arenaId => dispatch(fetchArena(arenaId))
+        fetchArena: arenaId => dispatch(fetchArena(arenaId))
     });
 }
 

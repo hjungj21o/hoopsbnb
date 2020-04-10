@@ -3,12 +3,16 @@ import ArenaIndexItem from './arena_index_item';
 
 
 class ArenaIndex extends React.Component {
+    constructor(props) {
+        super(props);
+        debugger;
+    }
     componentDidMount() {
         this.props.fetchArenas();
     }
 
     render() {
-
+        if (!this.props.arenas) return <div>loading..</div>
         const ArenaLi = this.props.arenas.map((arena, i) => {
             return <ArenaIndexItem 
                 key={ `${i}` } 

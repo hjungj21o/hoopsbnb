@@ -15,4 +15,4 @@ const mdp = dispatch => {
     };
 };
 
-export default withRouter(connect(msp, mdp)(ArenaIndex));
+export default connect(msp, mdp)(ArenaIndex);

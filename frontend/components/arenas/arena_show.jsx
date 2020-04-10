@@ -6,8 +6,15 @@ class ArenaShow extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.fetchArena(this.props.match.params.arenaId)
+    }
+
     render() {
         const { arena } = this.props;
+        if (!arena) {
+            return <div></div>;
+        }
         return (
             <div className="arena-details-container">
                 <div className="arena-title-city-pics">
@@ -48,10 +55,22 @@ class ArenaShow extends React.Component {
                 </div>
                 <div className="amenities-container">
                     <div className="amenities-title">
-                        
+                        Amenities
+                    </div>
+                    <div className="amenities-left">
+                        <ul>
+                            <li>Free Water</li>
+                            <li>Ball Rentals</li>
+                        </ul>
+                        <ul>
+                            <li>Towels Available</li>
+                            <li>First Aid Kit</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         )
     }
 }
+
+export default ArenaShow;

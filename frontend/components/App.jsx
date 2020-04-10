@@ -6,6 +6,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Splash from './splash/splash_form';
 import Footer from './footer/footer';
 import ArenaIndexContainer from './arenas/arena_index_container';
+import ArenaShowContainer from './arenas/arena_show_container';
 
 const App = () => (
     <div>
@@ -13,12 +14,13 @@ const App = () => (
         <header>
             <GreetingContainer />
         </header>
-        <div className="yjchunjae">
-        <Switch>
-        <AuthRoute exact path="/" component={Splash} />
-        <Route exact path="/arenas" component={ArenaIndexContainer} />
-        </Switch>
-        <Footer />
+        <div className="routes">
+            <Switch>
+                <AuthRoute exact path="/" component={Splash} />
+                <Route exact path="/arenas" component={ArenaIndexContainer} />
+                <Route path="/arenas/:arenaId" component={ArenaShowContainer} />
+            </Switch>
+            <Footer />
         </div>
     </div>
 );
