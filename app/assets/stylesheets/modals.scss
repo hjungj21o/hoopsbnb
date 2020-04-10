@@ -35,14 +35,19 @@
     font-family: sans-serif;
     padding: 5px;
     width: 100%;
+    font-stretch: expanded;
 }
 
 .signup-form {
     font-size: 22px;
     display: flex;
     width: 100%;
-    padding: 10px 0px;
+    padding: 10px 0px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    box-shadow: none;
 }
+
 .modal-form input {
     margin-bottom: 10px;
 }
@@ -72,13 +77,12 @@
     font-size: 20px;
 }
 
-
 .demo-login-button button {
     font-size: 22px;
     width: 100%;
     background-color: rgb(0, 86, 163);
     color: white;
-    height: 40px;
+    height: 50px;
     text-align: center;
     border-radius: 10px;
 }

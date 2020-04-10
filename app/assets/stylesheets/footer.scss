@@ -7,8 +7,25 @@
   display: flex;
   justify-content: space-around;
   background-color: white;
+  border-top: 1px gray solid;
+  border-bottom: 1px gray solid;
+  margin-top: 50px;
+}
+
+.footer-title {
+  border-left: 25px;
 }
 
  .footer-cat {
      margin: 15px;
+ }
+
+ .footer-cat li {
+   padding: 10px;
+   text-align: left;
+ }
+
+ .footer-cat li:first-child {
+   font-weight: bold;
+   
  }

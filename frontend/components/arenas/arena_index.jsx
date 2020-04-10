@@ -5,7 +5,6 @@ import ArenaIndexItem from './arena_index_item';
 class ArenaIndex extends React.Component {
     constructor(props) {
         super(props);
-        debugger;
     }
     componentDidMount() {
         this.props.fetchArenas();

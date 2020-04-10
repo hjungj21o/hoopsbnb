@@ -6,8 +6,8 @@ const Footer = () => {
         <footer>
             <div className="footer-container">
                 <section className="about">
-                    <h4 className="footer-title">ABOUT</h4>
                     <ul className="footer-cat">
+                        <li className="footer-title">ABOUT</li>
                         <li>Diversity & Belonging</li>
                         <li>Accessibility</li>
                         <li>Trust & Safety</li>
@@ -16,8 +16,8 @@ const Footer = () => {
                     </ul>
                 </section>
                 <section className="communty">
-                    <h4 className="footer-title">COMMUNITY</h4>
                     <ul className="footer-cat">
+                        <li className="footer-title">COMMUNITY</li>
                         <li>Hoopsbnb Magazine</li>
                         <li>Hoopsbnb for Work</li>
                         <li>Invite friends</li>
@@ -26,16 +26,18 @@ const Footer = () => {
                     </ul>
                 </section>
                 <section className="host">
-                    <h4 className="footer-title">HOST</h4>
                     <ul className="footer-cat">
-                        <li>GitHub</li>
-                        <li>LinkedIn</li>
-                        <li>AngelList</li>
+                        <li className="footer-title">HOST</li>
+                        <li>Host your hoops</li>
+                        <li>Responsible hosting</li>
+                        <li>Olympics</li>
+                        <li>NBA</li>
+                        <li>Resources Center</li>
                     </ul>
                 </section>
                 <section className="about">
-                    <h4 className="footer-title">SUPPORT</h4>
                     <ul className="footer-cat">
+                        <li className="footer-title">SUPPORT</li>
                         <li>Help Center</li>
                         <li>FAQs</li>
                     </ul>

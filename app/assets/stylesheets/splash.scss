@@ -1,27 +1,29 @@
 .splash-container {
     display: flex;
     position: relative;
-    padding: 150px 0px 0px 90px;
+    padding: 100px 0px 0px 85px;
     background-image: image-url("td_garden.jpg");
     background-size: cover;
-    height: 700px;
-    font-family: inherit;
-}
-
-.splash-form-title {
-    display: flex;
-    padding: 10px 0px;
-    font-size: 20px;
-    align-items: center;
-    margin-bottom: 15px;
-    min-height: 20%
+    height: 900px;
 }
 
 .splash-form-container {
+    padding: 35px;
     background-color: white;
-    height: 450px;
-    width: 400px;
-    border-radius: 5px;
+    height: 480px;
+    width: 441px;
+    border-radius: 10px;
+}
+
+.splash-form-title {
+    font-weight: bold;
+    line-height: 1.5;
+    display: flex;
+    padding: 10px 0px;
+    font-size: 23px;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
 }
 
 .splash-search-label {
@@ -37,14 +39,16 @@
 
 .splash-search-submit-button-div {
     float: right;
-    margin-right: 5px;
+    display: inline;
 }
 
 .splash-search-submit-button {
+    font-weight: bold;
     margin: 0px auto;
-    background-color: rgb(0, 86, 163);
+    background-color: rgb(202, 6, 41);
     font-size: 16px;
     color: white;
     padding: 5px 25px;
-    border-radius: 2px
+    border-radius: 7px;
+    height: 45px;
 }

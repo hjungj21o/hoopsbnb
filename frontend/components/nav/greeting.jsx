@@ -4,6 +4,16 @@ import { Link } from 'react-router-dom';
 class Greeting extends React.Component {
     constructor (props) {
         super(props);
+        
+        this.state = {
+            active: false
+        };
+        this.toggleClass = this.toggleClass.bind(this);
+    }
+
+    toggleClass() {
+        const currentState = this.state.active
+        this.setState( {active: !currentState } )
     }
  
 
@@ -22,9 +32,23 @@ class Greeting extends React.Component {
         );
 
         const personalGreeting = () => (
-            <div className="header-group">
-                <h2 className="header-name">{currentUser.first_name}</h2>
-                <button className="header-button" onClick={logout}>Log Out</button>
+            <div className="header-dropdown">
+                <button className="header-name" onClick={this.toggleClass} >
+                    {currentUser.first_name}
+                    &nbsp;
+                    <i className="fas fa-user-circle" />
+                </button>
+                <ul className={this.state.active ? "dropdown-menu-on" : "dropdown-menu-off"} >
+                    <li className="dropdown-bolded">Messages</li>
+                    <li className="dropdown-bolded">Trips</li>
+                    <li className="dropdown-bolded">Saved</li>
+                    <hr/>
+                    <li>Manage Owned Hoops</li>
+                    <li>Account</li>
+                    <hr/>
+                    <li>Help</li>
+                    <li onClick={logout}>Logout</li>
+                </ul>
             </div>
         );
         const whichUser = currentUser ? personalGreeting() : sessionLinks();
@@ -33,7 +57,7 @@ class Greeting extends React.Component {
             <>
             <nav className="fixed-nav-bar">
                 <div className="nav-left">
-                    <Link to="/" className="logo">Hoopsbnb</Link>
+                    <Link to="/" className="logo">Hoopsbnb.</Link>
                 </div>
                 <div className="nav-right">
                     {whichUser}
