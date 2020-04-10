@@ -7,6 +7,7 @@ import Splash from './splash/splash_form';
 import Footer from './footer/footer';
 import ArenaIndexContainer from './arenas/arena_index_container';
 import ArenaShowContainer from './arenas/arena_show_container';
+import SearchContainer from './search/search_container';
 
 const App = () => (
     <div>
@@ -17,7 +18,7 @@ const App = () => (
         <div className="routes">
             <Switch>
                 <AuthRoute exact path="/" component={Splash} />
-                <Route exact path="/arenas" component={ArenaIndexContainer} />
+                <Route exact path="/arenas" component={SearchContainer} />
                 <Route path="/arenas/:arenaId" component={ArenaShowContainer} />
             </Switch>
             <Footer />

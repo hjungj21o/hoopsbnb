@@ -1,6 +1,6 @@
 import React from 'react';
 
-class BenchMap extends React.Components {
+class ArenasListhMap extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -13,3 +13,5 @@ class BenchMap extends React.Components {
         )
     }
 }
+
+export default ArenasListhMap;
