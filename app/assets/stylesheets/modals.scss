@@ -16,7 +16,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 550px;
     min-height: 300px;
 }
@@ -27,9 +27,9 @@
 }
 
 .modal-close-x {
+    font-family: Arial, Helvetica, sans-serif;
     display: block;
     cursor: pointer;
-    text-align: right;
     opacity: .5;
     font-size: 25px;
     font-family: sans-serif;
@@ -57,7 +57,7 @@
     background-color: rgb(0, 86, 163);
     color: white;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .session-link-text {
@@ -80,7 +80,7 @@
     color: white;
     height: 40px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .hr-line {
@@ -88,7 +88,7 @@
     width: 100%;
     justify-content: space-between;
     box-sizing: border-box;
-    margin: 5px 0 10px 0;
+    margin: 0px 0 10px 0;
     color: #A2A2A2;
     font-size: 15px;
     align-items: center;
