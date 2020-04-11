@@ -63,6 +63,7 @@ body {
 
 li {
   list-style: none;
+  color:rgb(34,34,34);
 }
 
 ul {
@@ -73,11 +74,11 @@ button {
   cursor: pointer;
 }
  
-// div {
-//   border: red 1px solid;
-// }
+div {
+  border: red 1px solid;
+}
 
 #map-container {
-  height: 500px;
-  width: 500px;
+  height: 100%;
+  width: 100%;
 }

@@ -1,8 +1,7 @@
 .splash-container {
     display: flex;
-    position: relative;
     padding: 100px 0px 0px 85px;
-    background-image: image-url("td_garden.jpg");
+    background-image: image-url("artsy_ball_2.jpg");
     background-size: cover;
     height: 900px;
 }
@@ -22,24 +21,26 @@
     padding: 10px 0px;
     font-size: 23px;
     align-items: center;
-    margin-bottom: 40px;
     width: 100%;
 }
 
 .splash-search-label {
-    display: inline-block;
+    display: block;
     font-size: 16px;
-    padding-bottom: 10px;
+    padding: 5px;
 }
 
-
-.splash-form-container input {
-    margin: 15px;
+.splash-search-input {
+    padding: 12px 0;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid lightgray;
+    font-size: 15px;
 }
+
 
 .splash-search-submit-button-div {
     float: right;
-    display: inline;
 }
 
 .splash-search-submit-button {

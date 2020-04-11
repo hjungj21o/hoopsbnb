@@ -1,3 +1,8 @@
+footer {
+  width: 100%;
+  bottom: 0;
+}
+
 .footer-container {
   max-height: 30%;
   width: 100%;
@@ -23,9 +28,11 @@
  .footer-cat li {
    padding: 10px;
    text-align: left;
+   font-size: 13px;
  }
 
  .footer-cat li:first-child {
    font-weight: bold;
-   
  }
+
+ 

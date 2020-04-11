@@ -16,7 +16,6 @@ class Greeting extends React.Component {
         this.setState( {active: !currentState } )
     }
  
-
     render() {
 
         const { logout, currentUser, openModal } = this.props
@@ -39,15 +38,15 @@ class Greeting extends React.Component {
                     <i className="fas fa-user-circle" />
                 </button>
                 <ul className={this.state.active ? "dropdown-menu-on" : "dropdown-menu-off"} >
-                    <li className="dropdown-bolded">Messages</li>
-                    <li className="dropdown-bolded">Trips</li>
-                    <li className="dropdown-bolded">Saved</li>
+                    <li className="dropdown-first">Messages</li>
+                    <li className="dropdown-first">Trips</li>
+                    <li className="dropdown-first">Saved</li>
                     <hr/>
-                    <li>Manage Owned Hoops</li>
-                    <li>Account</li>
+                    <li className="dropdown-second">Manage Owned Hoops</li>
+                    <li className="dropdown-second">Account</li>
                     <hr/>
-                    <li>Help</li>
-                    <li onClick={logout}>Logout</li>
+                    <li className="dropdown-third">Help</li>
+                    <li className="dropdown-thid" onClick={logout} >Logout</li>
                 </ul>
             </div>
         );
@@ -57,7 +56,7 @@ class Greeting extends React.Component {
             <>
             <nav className="fixed-nav-bar">
                 <div className="nav-left">
-                    <Link to="/" className="logo">Hoopsbnb.</Link>
+                    <Link to="/" className="logo"><img src={window.logo} alt="logo" /></Link>
                 </div>
                 <div className="nav-right">
                     {whichUser}

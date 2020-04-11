@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Splash = () => {
@@ -26,7 +27,7 @@ const Splash = () => {
                                 type="date"
                             />
                         </label>
-                    <div>
+                    <div className="splash-search-check-time">
                         <label className="splash-search-label">
                             CHECK IN TIME
                             <input
@@ -44,7 +45,12 @@ const Splash = () => {
                     </div>
                     <div className="splash-search-submit-button-div">
                         
-                        <button className="splash-search-submit-button"><i className="fas fa-search"></i>Search</button>
+                            <button className="splash-search-submit-button">
+                        <Link to="/arenas">
+                                <i className="fas fa-search" />
+                                Search
+                        </Link>
+                                </button>
                     </div>
                 </div>
             </div>

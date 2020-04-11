@@ -57,12 +57,10 @@
      background-color: rgba(223, 223, 223, 0.612);
  }
 
- .logo {
+ .logo img {
      padding-left: 85px;
-     text-decoration: none;
-     font-size: 25px;
-     font-weight: bold;
-     color: black;
+     height: 35px;
+     width: auto;
  }
 
 // -----------  WHEN LOGGED IN 
@@ -78,10 +76,9 @@
     position: relative;
 }
 
-//  .header-dropdown {
-//      position: relative;
-
-//  }
+ .header-dropdown {
+     position: relative;
+ }
 
  .dropdown-menu-off {
      display: none;
@@ -93,15 +90,32 @@
      background-color: white;
      right: 30px;
      width: 240px;
-     height: 345px;
+     height: 340px;
+     box-shadow: 1px 1px 5px rgb(102, 102, 102);
+     border-radius: 10px;
  }
 
  .fa-user-circle {
      font-size: 30px;
  }
 
- .dropdown-bolded {
+ .dropdown-first {
      font-weight: bold;
  }
+
+ .dropdown-menu-on li:last-child {
+     cursor: pointer;
+ }
+
+ .dropdown-menu-on li {
+     padding: 17px 0 0 15px;
+ }
+
+ .dropdown-menu-on hr {
+     width: 100%;
+     margin-top: 25px;
+ }
+
+
 
 

@@ -1,0 +1,49 @@
+// Place all the styles related to the Arenas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.arenas-map-container {
+    display: inline;
+    min-height: 95vh;
+    display: grid;
+    grid-gap: 5px;
+    padding: 0 35px 0 35px;
+}
+
+.search-map-container {
+    max-height: 100%;
+    grid-column: 2;
+    grid-row: 1;
+
+}
+
+.arenas-search-result-container {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.arena-index-item {
+    padding: 20px 0px;
+    border-bottom: 1px gray solid;
+}
+
+.arenas-search-list > li {
+    max-height: 200px;
+}
+
+.key-list li {
+    display: inline;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.arenas-index-arena-name {
+    font-size: 18px;
+}
+
+.arenas-search-list img {
+    height: 200px;
+    width: 300px;
+}
+

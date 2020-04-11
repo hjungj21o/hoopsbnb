@@ -15,15 +15,15 @@ class ArenaIndex extends React.Component {
         const ArenaLi = this.props.arenas.map((arena, i) => {
             return <ArenaIndexItem 
                 key={ `${i}` } 
-                arena={ arena } 
+                arena={ arena }
             />
         })
         return (
-            <div>
-                <div>
-                    <h4>{this.props.arenas.length} Arenas to Ball </h4>
+            <div className="arenas-search-result-container">
+                <div className="arenas-search-title">
+                    <h2>{this.props.arenas.length} Arenas to Ball </h2>
                 </div>
-                <div className="placeholder">
+                <div className="arenas-search-list">
                     <ul>
                         {ArenaLi}
                     </ul>
