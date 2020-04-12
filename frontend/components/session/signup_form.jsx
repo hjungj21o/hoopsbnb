@@ -50,7 +50,9 @@ class SignUpForm extends React.Component {
             <div>
                 {this.handleErrors()}
                 <form className="modal-form" onSubmit={this.handleSubmit}>
-                    <div onClick={this.props.closeModal} className="modal-close-x">x</div>
+                    <div className="modal-close-x">
+                        <p onClick={this.props.closeModal} >x</p>
+                    </div>
                     <br></br>
                             <label className="modal-container">
                                 <input 

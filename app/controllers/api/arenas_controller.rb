@@ -2,6 +2,7 @@ class Api::ArenasController < ApplicationController
 
     def index
         @arenas = Arena.all
+        render :index
     end
 
     def show

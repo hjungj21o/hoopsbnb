@@ -1,6 +1,7 @@
 import React from 'react';
+import MarkerManager from '../../util/marker_manager';
 
-class ArenasListhMap extends React.Component {
+class ArenasListMap extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -12,7 +13,23 @@ class ArenasListhMap extends React.Component {
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
+        this.MarkerManager = new MarkerManager(this.map);
+
+        this.map.addListener('idle', () => {
+            const {north, south, east, west} = this.map.getBounds().toJSON();
+            const bounds = {
+                northEast: { lat: north, lng: east },
+                southWest: { lat: south, lng: west }
+            }
+            this.props.updateFilter(bounds);
+        });
+
+        this.MarkerManager.updateMarkers(this.props.arenas);
     };
+
+    componentDidUpdate() {
+        this.MarkerManager.updateMarkers(this.props.arenas);
+    }
 
     render() {
         return (
@@ -25,4 +42,4 @@ class ArenasListhMap extends React.Component {
     }
 }
 
-export default ArenasListhMap;
+export default ArenasListMap;

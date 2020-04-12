@@ -10,14 +10,20 @@ class Greeting extends React.Component {
         };
         this.toggleClass = this.toggleClass.bind(this);
     }
+    
+    // componentDidUpdate() {
+    //     if (!this.props.currentUser && this.state.active) {
+    //         this.state.active = false;
+    //     };
+    // }
 
     toggleClass() {
         const currentState = this.state.active
         this.setState( {active: !currentState } )
+
     }
  
     render() {
-
         const { logout, currentUser, openModal } = this.props
 
         const sessionLinks = () => (

@@ -2,10 +2,10 @@ import React from 'react';
 import ArenaIndex from '../arenas/arena_index';
 import ArenasListMap from '../map/arenas_list_map';
 
-const Search = ( { arenas, fetchArenas } ) => {
+const Search = ( { arenas, fetchArenas, updateBounds } ) => {
     return (
         <div className="arenas-map-container">
-            <ArenasListMap  />
+            <ArenasListMap arenas={arenas} updateBounds={updateBounds} />
             <ArenaIndex arenas={arenas} fetchArenas={fetchArenas} />
         </div>
     )

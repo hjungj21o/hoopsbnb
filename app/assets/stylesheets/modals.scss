@@ -26,16 +26,14 @@
     padding: 25px 35px;
 }
 
-.modal-close-x {
+.modal-close-x p {
     font-family: Arial, Helvetica, sans-serif;
-    display: block;
     cursor: pointer;
+    padding: 5px;
+    font-stretch: expanded;
+    width: 5%;
     opacity: .5;
     font-size: 25px;
-    font-family: sans-serif;
-    padding: 5px;
-    width: 100%;
-    font-stretch: expanded;
 }
 
 .signup-form {

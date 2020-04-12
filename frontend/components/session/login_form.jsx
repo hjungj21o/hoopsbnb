@@ -49,7 +49,9 @@ class LoginForm extends React.Component {
         return (
             <div>
                 <form className="modal-form" onSubmit={this.handleSubmit}>
-                    <div onClick={this.props.closeModal} className="modal-close-x">x</div>
+                    <div className="modal-close-x">
+                        <p onClick={this.props.closeModal} >x</p>
+                    </div>
                         {this.handleErrors()}
                         <br></br>
                         <div className="demo-login-button">
