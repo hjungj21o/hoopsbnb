@@ -4,6 +4,21 @@ export default class MarkerManager {
         this.markers = {};
     }
 
+    updateMarkers(arenas) {
+        const arenaObj = {};
+        arenas.forEach(arena => arenaObj[arena.id] = arena);
+
+        Object.keys(this.markers)
+            .filter(arenaId => !arenaObj[arenaId])
+            .forEach((arenaId) => this.removeMarker(this.markers[arenaId]))
+
+        arenas.forEach(arena => {
+            if (!Object.keys(this.markers).includes(arenas.id)) {
+                this.createMarkerFromArena(arena);
+            }
+        })
+    }
+
     createMarkerFromArena(arena) {
         const arenaLatLng = new google.maps.LatLng(arena.lat, arena.lng);
 
@@ -15,11 +30,9 @@ export default class MarkerManager {
         this.markers[marker.arenaId] = marker;
     };
 
-    updateMarkers(arenas) {
-        arenas.forEach(arena => {
-            if (!Object.keys(this.markers).includes(arenas.id)) {
-                this.createMarkerFromArena(arena);
-            }
-        })
+    removeMarker(marker) {
+        this.markers[marker.arenaId].setMap(null);
+        delete this.markers[marker.arenaId];
     }
+
 }

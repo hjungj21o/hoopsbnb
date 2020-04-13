@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Search from './search';
 import { fetchArenas } from '../../actions/arena_actions';
 import { withRouter } from 'react-router-dom';
-import { updateBounds } from '../../actions/filter_actions';
+import { updateFilter } from '../../actions/filter_actions';
 
 const msp = state => {
     return {
@@ -13,7 +13,7 @@ const msp = state => {
 const mdp = dispatch => {
     return {
         fetchArenas: () => dispatch(fetchArenas()),
-        updateBounds: bounds => dispatch(updateBounds(bounds))
+        updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
     };
 };
 

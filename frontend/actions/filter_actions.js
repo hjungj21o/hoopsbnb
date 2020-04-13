@@ -1,8 +1,14 @@
-export const UPDATE_BOUNDS = 'UPDATE_BOUNDS';
+import { fetchArenas } from '../actions/arena_actions';
 
-export const updateBounds = bounds => {
-    return {
-        type: UPDATE_BOUNDS,
-        bounds
-    };
+export const UPDATE_FILTER = 'UPDATE_FILTER';
+
+export const changeFilter = (filter, value) => ({
+    type: UPDATE_FILTER,
+    filter,
+    value
+});
+
+export const updateFilter = (filter, value) => (dispatch, getState) => {
+    dispatch(changeFilter(filter, value));
+    return fetchArenas(getState().ui.filters[filter])(dispatch);
 };

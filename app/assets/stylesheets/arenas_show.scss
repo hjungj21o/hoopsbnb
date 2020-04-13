@@ -1,0 +1,48 @@
+.arena-details-text-container {
+    display: flex;
+    width: 650px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.arena-details-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arena-details-name div:first-child {
+    font-size: 32px;
+}
+
+.arena-gm-title {
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.arena-gm-title > i {
+    padding-right: 10px;
+}
+
+.arena-gm-expand {
+    font-size: 12px;
+    padding-left: 25px;
+}
+
+.amenities-title {
+    font-weight: bold;
+}
+
+.amenities-container li > i {
+    padding-right: 5px;
+}
+
+.amenities-list-container {
+    width: 50%;
+}
+
+.amenities-list-container {
+    justify-content: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

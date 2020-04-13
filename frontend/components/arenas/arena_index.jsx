@@ -8,7 +8,7 @@ class ArenaIndex extends React.Component {
     }
     
     componentDidMount() {
-        this.props.fetchArenas();
+        // this.props.fetchArenas();
     }
 
     render() {
@@ -25,7 +25,7 @@ class ArenaIndex extends React.Component {
                     <h2>{this.props.arenas.length} Arenas to Ball </h2>
                 </div>
                 <div className="arenas-search-list">
-                    <ul>
+                    <ul className="arenas-search-list-ul">
                         {ArenaLi}
                     </ul>
                 </div>

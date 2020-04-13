@@ -5,44 +5,83 @@
 
 .arenas-map-container {
     min-height: 95vh;
-    display: grid;
     grid-gap: 5px;
     padding: 0 35px 0 35px;
+    display: flex;
 }
 
 .search-map-container {
     max-height: 100%;
-    grid-column: 2;
-    grid-row: 1;
-    display: flex;
-
+    width: 100%;
 }
 
-.arenas-search-result-container {
-    grid-column: 1;
-    grid-row: 1;
-}
 
 .arena-index-item {
     padding: 20px 0px;
     border-bottom: 1px gray solid;
+    display: flex;
 }
 
 .arenas-search-list > li {
     max-height: 200px;
 }
 
+.key-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
 .key-list li {
-    display: inline;
     padding: 5px;
-    font-size: 14px;
+    font-size: 12px;
+    color: rgb(113,113,113);
+}
+
+.arenas-index-title-list li:last-child {
+    font-weight: bold;
+    color: rgb(34, 34, 34);
 }
 
 .arenas-index-arena-name {
-    font-size: 18px;
+    font-size: 20px;
+    color: rgb(34, 34, 34);
 }
 
+.arenas-search-list {
+    display: inline;
+}
 .arenas-search-list img {
     height: 200px;
     width: 300px;
 }
+
+.arena-index-list-container {
+    display: flex;
+    width: 100%;
+}
+
+.arenas-container {
+    width: 800px;
+}
+
+.arenas-index-list{
+    width: 100%;
+}
+
+.arenas-index-title-list li i {
+    color: rgb(245,61,78);
+}
+
+.arenas-index-pricing {
+    display: flex;
+    float: right;
+    align-content: flex-end;
+}
+
+.dollars {
+    font-weight: bold;
+}
+
+

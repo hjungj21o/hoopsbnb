@@ -21,7 +21,7 @@ class ArenasListMap extends React.Component {
                 northEast: { lat: north, lng: east },
                 southWest: { lat: south, lng: west }
             }
-            this.props.updateFilter(bounds);
+            this.props.updateFilter('bounds', bounds);
         });
 
         this.MarkerManager.updateMarkers(this.props.arenas);

@@ -1,7 +1,7 @@
 class Api::ArenasController < ApplicationController
 
     def index
-        @arenas = Arena.all
+        @arenas = Arena.in_bounds(params[:filters])
         render :index
     end
 

@@ -12,8 +12,8 @@ const receiveArena = arena => ({
     arena
 })
 
-export const fetchArenas = () => dispatch => (
-    ArenasApiUtil.fetchArenas()
+export const fetchArenas = (data) => dispatch => (
+    ArenasApiUtil.fetchArenas(data)
         .then(arenas => dispatch(receiveArenas(arenas)))
 );
 
