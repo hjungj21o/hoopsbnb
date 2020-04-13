@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 Arena.destroy_all
 # Booking.destroy_all
 # Review.destroy_all
@@ -16,6 +18,7 @@ u2 = User.create(username: "thegoat23", password: "chicagobulls", email: "thegoa
 u3 = User.create(username: "earthisflat", password: "brooklynnets", email: "kyrieirving@brooklynnets.com", first_name: "Kyrie", last_name: "Irving")
 u4 = User.create(username: "halfcourt3", password: "goldenstate", email: "stephencurry30@gsw.com", first_name: "Stephen", last_name: "Curry")
 u5 = User.create(username: "eurosteps", password: "houstonrockets", email: "jamesharden@houston.com", first_name: "James", last_name: "Harden")
+u6 = User.create(username: "shaqtinafool" password: "shaqisadj", email:"shaq@shaqtinafool.com", first_name: "Shaq", last_name: "O'neal")
 
 a1 = Arena.create(
     name: "Spectrum Arena",
@@ -116,6 +119,47 @@ a8 = Arena.create(
     description: "The award-winning state-of-the-art TD Garden is a year-round, 
     19,600-seat arena with a multi-million dollar high definition video scoreboard 
     and complete 360-degree LED technology."
+)
+
+a9 = Arena.create(
+    name: "Heart of New York - MSG!",
+    address: "4 Pennsylvania Plaza",
+    city: "New York", 
+    gm_id: u6.id, 
+    price: 10000, 
+    lat: 40.7502277, 
+    lng: -73.994853,
+    description: "Madison Square Garden, colloquially known as The Garden or 
+    in initials as MSG, is a multi-purpose indoor arena in New York City. 
+    Located in Midtown Manhattan between 7th and 8th Avenues from 31st to 
+    33rd Streets, it is situated atop Pennsylvania Station."
+)
+
+a10 = Arena.create(
+    name: "Take Flight @ Jordan Terminal 23",
+    address: "145 W 32nd St",
+    city: "New York", 
+    gm_id: u2.id, 
+    price: 900, 
+    lat: 40.7493709, 
+    lng: -73.992554,
+    description: "Jordan Brand built a unique consumer space dubbed Terminal 23 
+    in the once famous Cafe Rouge just across the street from Madison Square 
+    Garden at New York’s Hotel Pennsylvania. Strap in, and take flight."
+)
+
+a11 = Arena.create(
+    name: "The Home of the Brooklyn Nets",
+    address: "620 Atlantic Ave",
+    city: "Brooklyn", 
+    gm_id: u3.id, 
+    price: 6500, 
+    lat: 40.6826465, 
+    lng: -73.9776043,
+    description: "In the heart of Brooklyn, at the crossroads of Atlantic 
+    and Flatbush Avenues, Barclays Center is setting a new standard as the 
+    showcase venue for the world's most thrilling entertainment and sports 
+    events."
 )
 
 

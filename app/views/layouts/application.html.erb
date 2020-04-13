@@ -7,7 +7,11 @@
     <script src='https://kit.fontawesome.com/cac26a4ea7.js' crossorigin='anonymous'></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
+    #Original code that was in the Benchbnb HW - WORKS FINE but only on localhost
+    
+    #React code that we can use to interact with on the front end - does NOT work
+    
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script type='text/javascript'>

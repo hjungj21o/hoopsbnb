@@ -31,4 +31,6 @@ class Arena < ApplicationRecord
         foreign_key: :arena_id,
         class_name: :Review
 
+    has_many_attached :photos
+
 end

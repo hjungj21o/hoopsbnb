@@ -18,8 +18,13 @@
 
 .arena-index-item {
     padding: 20px 0px;
-    border-bottom: 1px gray solid;
+    border-bottom: 1px solid rgb(235,235,235);
     display: flex;
+    margin-right: 20px; 
+}
+
+.arena-index-item:last-child {
+    border-bottom: none;
 }
 
 .arenas-search-list > li {
@@ -32,6 +37,11 @@
     justify-content: space-between;
 
 }
+
+.key-list:not(:first-child) {
+    width: 60%;
+}
+
 
 .key-list li {
     padding: 5px;
@@ -46,13 +56,14 @@
 
 .arenas-index-arena-name {
     font-size: 20px;
-    color: rgb(34, 34, 34);
+    padding-left: 5px;
 }
 
 .arenas-search-list {
     display: inline;
 }
 .arenas-search-list img {
+    border-radius: 5px;
     height: 200px;
     width: 300px;
 }
@@ -60,6 +71,8 @@
 .arena-index-list-container {
     display: flex;
     width: 100%;
+    position: relative;
+  
 }
 
 .arenas-container {
@@ -76,9 +89,11 @@
 
 .arenas-index-pricing {
     display: flex;
-    float: right;
-    align-content: flex-end;
+    bottom: 0%;
+    right: 0%;
+    position: absolute;
 }
+
 
 .dollars {
     font-weight: bold;
