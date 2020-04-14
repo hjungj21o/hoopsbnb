@@ -18,7 +18,7 @@ u2 = User.create(username: "thegoat23", password: "chicagobulls", email: "thegoa
 u3 = User.create(username: "earthisflat", password: "brooklynnets", email: "kyrieirving@brooklynnets.com", first_name: "Kyrie", last_name: "Irving")
 u4 = User.create(username: "halfcourt3", password: "goldenstate", email: "stephencurry30@gsw.com", first_name: "Stephen", last_name: "Curry")
 u5 = User.create(username: "eurosteps", password: "houstonrockets", email: "jamesharden@houston.com", first_name: "James", last_name: "Harden")
-u6 = User.create(username: "shaqtinafool" password: "shaqisadj", email:"shaq@shaqtinafool.com", first_name: "Shaq", last_name: "O'neal")
+u6 = User.create(username: "shaqtinafool", password: "shaqisadj", email:"shaq@shaqtinafool.com", first_name: "Shaq", last_name: "O'neal")
 
 a1 = Arena.create(
     name: "Spectrum Arena",
@@ -35,6 +35,9 @@ a1 = Arena.create(
     exchange between arena guests in all areas of the building, providing 
     connectivity of and creating community."
 )
+
+a1.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/spectrum_arena_index.jpg"), filename: "spectrum_arena_index.jpg")
+
 a2 = Arena.create(
     name: "Your trusty local neighborhood basketball hoop",
     address: "291 Murray Ave", 
@@ -46,6 +49,9 @@ a2 = Arena.create(
     description: "An old but trustworthy basketball hoop that has been in the family for a decade.
     All we ask is that you don't try to dunk, "
 )
+
+a2.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/driveway_hoops_index.jpg"), filename: "driveway_hoops_index.jpg")
+
 a3 = Arena.create(
     name: "Welcome to the Cage!",
     address: "320 6th Ave", 
@@ -59,6 +65,9 @@ a3 = Arena.create(
     Unlike the other courts on this list, The Cage is primarily known for its 
     non-regulation size—adding emphasis to the physicality of the game."
 )
+
+a3.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/the_cage_index.jpg"), filename: "the_cage_index.jpg")
+
 a4 = Arena.create(
     name: "Beach, Boardwalk, Basketball @ Venice",
     address: "1708 Ocean Front Walk",
@@ -72,6 +81,9 @@ a4 = Arena.create(
     Dwight Howard and Blake Griffin and for the massive summer tournament 
     that is held annually."
 )
+
+a4.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/venice_beach_index.jpg"), filename: "venice_beach_index.jpg")
+
 a5 = Arena.create(
     name: "Play bball at the heart of Central Park",
     address: "Great Lawn Oval",
@@ -83,6 +95,9 @@ a5 = Arena.create(
     description: "The most popular basketball spot in New York’s backyard 
     is on the Great Lawn just north of the baseball fields."
 )
+
+a5.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/central_park_index.jpg"), filename: "central_park_index.jpg")
+
 a6 = Arena.create(
     name: "Come do some windmills and impress the crowd!",
     address: "Nagle Ave & W 204th Street", 
@@ -94,6 +109,9 @@ a6 = Arena.create(
     description: "Crashing the boards at this Inwood institution isn’t for newbies. 
     Come summertime, the park even attracts a fair amount of college and even pro players."
 )
+
+a6.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/dyckman_park_index.jpg"), filename: "dyckman_park_index.jpg")
+
 a7 = Arena.create(
     name: "Get your professional contract here",
     address: "280 W 155th St",
@@ -108,6 +126,9 @@ a7 = Arena.create(
     court for amateur basketball players to showcase their talent 
     in an effort to land a professional contract." 
 )
+
+a7.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/rucker_park_index.jpg"), filename: "rucker_park_index.jpg")
+
 a8 = Arena.create(
     name: "Play on the classic parquet floors, or watch a movie on the Jumbotron",
     address: "1708 Ocean Front Walk",
@@ -120,6 +141,8 @@ a8 = Arena.create(
     19,600-seat arena with a multi-million dollar high definition video scoreboard 
     and complete 360-degree LED technology."
 )
+
+a8.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/td_garden_index.jpg"), filename: "td_garden_index.jpg")
 
 a9 = Arena.create(
     name: "Heart of New York - MSG!",
@@ -135,6 +158,8 @@ a9 = Arena.create(
     33rd Streets, it is situated atop Pennsylvania Station."
 )
 
+a9.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/msg_index.jpg"), filename: "msg_index.jpg")
+
 a10 = Arena.create(
     name: "Take Flight @ Jordan Terminal 23",
     address: "145 W 32nd St",
@@ -147,6 +172,8 @@ a10 = Arena.create(
     in the once famous Cafe Rouge just across the street from Madison Square 
     Garden at New York’s Hotel Pennsylvania. Strap in, and take flight."
 )
+
+a10.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/jordan_terminal_23_index.jpg"), filename: "jordan_terminal_23_index.jpg" )
 
 a11 = Arena.create(
     name: "The Home of the Brooklyn Nets",
@@ -161,6 +188,9 @@ a11 = Arena.create(
     showcase venue for the world's most thrilling entertainment and sports 
     events."
 )
+
+a11.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/bk_nets_index.jpg"), filename: "bk_nets_index.jpg")
+
 
 
 # r1 = Review.create()

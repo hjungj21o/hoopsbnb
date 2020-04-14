@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ArenaIndexItem = ( { arena } ) => {
+    if (Object.keys(arena).length === 0) return <div>fetching data...</div>
     return (
         <li className="arena-index-item">
             <Link to={`/arenas/${arena.id}`} className="arenas-container">
                 <div className="arena-index-list-container">
                     <div className="arenas-search-list-img">
-                        <img src={window.arena} alt="arena" />
+                        <img src={arena.photoUrls[0]} alt="arena" />
                     </div>
                     <div className="arenas-index-list">
                         <div className="arenas-index-title-list key-list">

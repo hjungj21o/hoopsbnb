@@ -11,7 +11,7 @@ class ArenasListMap extends React.Component {
             center: { lat: 40.736251, lng: -73.990223 },
             zoom: 13
         };
-        debugger;
+        
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);
 

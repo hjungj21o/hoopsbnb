@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SplashGreetingContainer from '../nav/splash_greeting_container';
 
 
 const Splash = () => {
 
     return (
+        <>
+        <header>
+            <SplashGreetingContainer />
+        </header>
         <div className="splash-container">
             <div className="splash-form-container">
                 <div className="splash-form-title">
@@ -55,6 +60,7 @@ const Splash = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

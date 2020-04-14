@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-import Greeting from './greeting';
+import NonSplashGreeting from './nonsplash_greeting';
 import { withRouter } from 'react-router-dom';
 import { openModal } from '../../actions/modal_actions';
 
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
     openModal: modal => dispatch(openModal(modal)) 
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Greeting));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NonSplashGreeting));

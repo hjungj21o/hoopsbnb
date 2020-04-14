@@ -46,3 +46,57 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+// PICTURES
+
+.arena-pics {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    border: 1px black solid;
+}
+
+.arena-main-pic {
+    height: 100%;
+    width: 50%;
+}
+
+.arena-main-pic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.arena-sub-pics {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+.arena-sub-pic {
+    height: 300px;
+    width: 50%;
+    object-fit: cover;
+}
+
+.arena-sub-pic img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border: solid 1px rgb(72, 72, 72);
+}
+
+// .arena-pics-row-1 img {
+//     height: 300px;
+//     width: 100%;
+//     object-fit: cover;
+// }
+
+// .arena-pics-row-2 img {
+//     height: 300px;
+//     width: 100%;
+//     object-fit: contain;
+
+// }

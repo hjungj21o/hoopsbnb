@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Greeting extends React.Component {
+class NonSplashGreeting extends React.Component {
     constructor (props) {
         super(props);
         
@@ -27,7 +27,7 @@ class Greeting extends React.Component {
         const { logout, currentUser, openModal } = this.props
 
         const sessionLinks = () => (
-            <nav className="login-signup">
+            <nav className="nonsplash-login-signup">
                 <div className="nav">
                     <button className="form-button" onClick={() => openModal('login')}>Log in</button>
 
@@ -37,7 +37,7 @@ class Greeting extends React.Component {
         );
 
         const personalGreeting = () => (
-            <div className="header-dropdown">
+            <div className="nonsplash-header-dropdown">
                 <button className="header-name" onClick={this.toggleClass} >
                     {currentUser.first_name}
                     &nbsp;
@@ -60,9 +60,9 @@ class Greeting extends React.Component {
 
         return (
             <>
-            <nav className="fixed-nav-bar">
+            <nav className="nonsplash-fixed-nav-bar">
                 <div className="nav-left">
-                    <Link to="/" className="logo"><img src={window.logo} alt="logo" /></Link>
+                    <Link to="/" className="nonsplash-logo"><img src={window.logo_ball} alt="logo" /></Link>
                 </div>
                 <div className="nav-right">
                     {whichUser}
@@ -74,7 +74,7 @@ class Greeting extends React.Component {
     }
 }
 
-export default Greeting;
+export default NonSplashGreeting;
 
 // import React from 'react';
 

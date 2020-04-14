@@ -1,4 +1,5 @@
 import React from 'react';
+import NonSplashGreetingContainer from '../nav/nonsplash_greeting_container';
 
 
 class ArenaShow extends React.Component {
@@ -16,8 +17,43 @@ class ArenaShow extends React.Component {
             return <div></div>;
         }
         return (
+            <>
+            <header>
+                <NonSplashGreetingContainer />
+            </header>
             <div className="arena-details-container">
                 <div className="arena-title-city-pics">
+                    <div className="arena-pics">
+                        <div className="arena-main-pic">
+                            <img src={this.props.arena.photoUrls[0]} alt="main-photo" />
+                        </div>
+                        <div className="arena-sub-pics">
+                            <div className="arena-sub-pic">
+                                <img 
+                                    src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_cropped_2.jpg" 
+                                    alt="alt-photo-2" 
+                                />
+                            </div>
+                            <div className="arena-sub-pic">
+                                    <img
+                                        src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_2_cropped.jpg"
+                                        alt="alt-photo-3"
+                                    />
+                            </div>
+                            <div className="arena-sub-pic">
+                                <img
+                                        src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_3_cropped.jpg"
+                                    alt="alt-photo-4"
+                                />
+                            </div>
+                            <div className="arena-sub-pic">
+                                <img
+                                        src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_4_cropped_2.jpg"
+                                    alt="alt-photo-4"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="arena-details-text-container">
                         <div className="arena-title-city">
@@ -73,14 +109,15 @@ class ArenaShow extends React.Component {
                             </div>
                             <div className="amenities-right">
                                 <ul>
-                                    <li><i class="fas fa-layer-group" />Towels Available</li>
-                                    <li><i class="fas fa-exclamation" />Referees On-Site</li>
+                                    <li><i className="fas fa-layer-group" />Towels Available</li>
+                                    <li><i className="fas fa-exclamation" />Referees On-Site</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            </>
         )
     }
 }
