@@ -38,7 +38,7 @@ class NonSplashGreeting extends React.Component {
 
         const personalGreeting = () => (
             <div className="nonsplash-header-dropdown">
-                <button className="header-name" onClick={this.toggleClass} >
+                <button className="nonsplash-header-name" onClick={this.toggleClass} >
                     {currentUser.first_name}
                     &nbsp;
                     <i className="fas fa-user-circle" />

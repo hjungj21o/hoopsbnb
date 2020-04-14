@@ -1,5 +1,6 @@
 import React from 'react';
 import NonSplashGreetingContainer from '../nav/nonsplash_greeting_container';
+import ArenaShowMap from '../map/arena_show_map';
 
 
 class ArenaShow extends React.Component {
@@ -69,6 +70,14 @@ class ArenaShow extends React.Component {
 
                             <p>{arena.city}</p>
                         </div>
+                        
+                        <div className="arenas-index-key-list">
+                            <ul>
+                                <li>20 hoopers</li>
+                                <li>Day or Night</li>
+                                <li>Regulation Size</li>
+                            </ul>
+                        </div>
                 
                     <div className="arena-gm-container">
                         <div className="arena-gm-descriptions">
@@ -77,6 +86,12 @@ class ArenaShow extends React.Component {
                                 Superhosts are experienced, 
                                 highly rated hosts who are committed to providing 
                                 great stays for guests.
+                            </div>
+                            <div className="arena-gm-title"><i className="fas fa-basketball-ball" />Entire Court</div>
+                            <div className="arena-gm-expand">
+                                You own the court - your court, your rules.
+                                No more "I got next"s.
+                                Run it back until you can't.
                             </div>
                             <div className="arena-gm-title"><i className="fas fa-hand-sparkles"></i>Sparkling clean</div>
                             <div className="arena-gm-expand">
@@ -101,22 +116,15 @@ class ArenaShow extends React.Component {
                             Amenities
                         </div>
                         <div className="amenities-list-container">
-                            <div className="amenities-left">
-                                <ul>
-                                    <li><i className="fas fa-tint" />Free Water</li>
-                                    <li><i className="fas fa-basketball-ball" />Ball Rentals</li>
-                                </ul>
-                            </div>
-                            <div className="amenities-right">
-                                <ul>
-                                    <li><i className="fas fa-layer-group" />Towels Available</li>
-                                    <li><i className="fas fa-exclamation" />Referees On-Site</li>
-                                </ul>
-                            </div>
+                            <div><i className="fas fa-tint" />Free Water</div>
+                            <div><i className="fas fa-basketball-ball" />Ball Rentals</div>
+                            <div><i className="fas fa-layer-group" />Towels Available</div>
+                            <div><i className="fas fa-exclamation" />Referees On-Site</div>
                         </div>
                     </div>
                 </div>
             </div>
+                <ArenaShowMap arena={this.props.arena} />
             </>
         )
     }

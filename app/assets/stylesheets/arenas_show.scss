@@ -8,16 +8,46 @@
 .arena-details-name {
     display: flex;
     justify-content: space-between;
+    padding: 15px 0;
 }
 
 .arena-details-name div:first-child {
     font-size: 32px;
+    font-weight: bold;
+}
+
+.arena-title-city p {
+    font-size: 16px;
+    padding-bottom: 25px;
+}
+
+.arenas-index-key-list {
+    width: 50%;
+}
+
+.arenas-index-key-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.arenas-index-key-list li {
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: rgb(113,113,113);
+}
+
+.arena-gm-descriptions {
+    padding: 20px 0;
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
 }
 
 .arena-gm-title {
     font-weight: bold;
-    font-size: 12px;
-    padding-top: 5px;
+    font-size: 16px;
+    padding-top: 10px;
 }
 
 .arena-gm-title > i {
@@ -25,8 +55,22 @@
 }
 
 .arena-gm-expand {
-    font-size: 12px;
-    padding-left: 25px;
+    font-size: 14px;
+    padding-left: 27px;
+    color: rgb(113,113,113);
+}
+
+.arena-long-description-container {
+    padding: 25px 0;
+    border-bottom: 1px solid black;
+}
+
+.arena-long-description-contact-host {
+    padding-top: 10px;
+}
+
+.amenities-container {
+    padding-top: 25px;
 }
 
 .amenities-title {
@@ -42,12 +86,18 @@
 }
 
 .amenities-list-container {
-    justify-content: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    padding-top: 15px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
 }
 
-// PICTURES
+.amenities-list-container i {
+    padding-right: 5px;
+}
+
+
+// ----------PICTURES
 
 .arena-pics {
     height: 600px;
@@ -59,11 +109,23 @@
 .arena-main-pic {
     height: 100%;
     width: 50%;
+    overflow: hidden;
 }
 
 .arena-main-pic img {
     height: 100%;
     width: 100%;
+    cursor: pointer;
+    transition: all .3s ease;
+    object-fit: cover;
+}
+
+.arena-main-pic img:hover {
+    // display: flex;
+    transition: .5s height ease;
+    height: 105%;
+    align-items: center;
+    justify-content: center;
     object-fit: cover;
 }
 
@@ -72,31 +134,36 @@
     flex-wrap: wrap;
     height: 100%;
     width: 50%;
-    overflow: hidden;
 }
 
 .arena-sub-pic {
     height: 300px;
     width: 50%;
-    object-fit: cover;
+    overflow: hidden;
 }
 
 .arena-sub-pic img {
     height: 300px;
     width: 100%;
-    object-fit: cover;
     border: solid 1px rgb(72, 72, 72);
+    cursor: pointer;
+    transition: all .3s ease;
+    object-fit: cover;
 }
 
-// .arena-pics-row-1 img {
-//     height: 300px;
-//     width: 100%;
-//     object-fit: cover;
-// }
+.arena-sub-pic img:hover {
+    // transform: scale(1.1);
+    display: flex;
+    transition: .5s height ease;
+    height: 110%;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    overflow: hidden;
+}
 
-// .arena-pics-row-2 img {
-//     height: 300px;
-//     width: 100%;
-//     object-fit: contain;
+.search-map-container-show {
+    max-height: 100%;
+    width: 100%;
+}
 
-// }
