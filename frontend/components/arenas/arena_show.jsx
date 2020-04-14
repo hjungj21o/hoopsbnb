@@ -124,7 +124,7 @@ class ArenaShow extends React.Component {
                     </div>
                 
                 </div>
-                <div classname="arena-show-map">
+                <div className="arena-show-map">
                     <ArenaShowMap arena={this.props.arena} />
                 </div>
             </div>
