@@ -1,6 +1,6 @@
 .arena-details-text-container {
     display: flex;
-    width: 650px;
+    width: 600px;
     margin: 0 auto;
     flex-direction: column;
 }
@@ -21,18 +21,18 @@
     padding-bottom: 25px;
 }
 
-.arenas-index-key-list {
+.arenas-show-key-list {
     width: 50%;
 }
 
-.arenas-index-key-list ul {
+.arenas-show-key-list ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
 
-.arenas-index-key-list li {
+.arenas-show-key-list li {
     padding-bottom: 20px;
     font-size: 16px;
     color: rgb(113,113,113);

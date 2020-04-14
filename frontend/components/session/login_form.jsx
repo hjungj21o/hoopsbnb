@@ -76,7 +76,7 @@ class LoginForm extends React.Component {
                         <div className="modal-container">
                             <input
                                 className="signup-form"
-                                type="text"
+                                type="password"
                                 placeholder='password'
                                 value={this.state.password}
                                 onChange={this.update('password')}

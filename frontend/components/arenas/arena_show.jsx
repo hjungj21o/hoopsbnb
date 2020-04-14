@@ -71,7 +71,7 @@ class ArenaShow extends React.Component {
                             <p>{arena.city}</p>
                         </div>
                         
-                        <div className="arenas-index-key-list">
+                        <div className="arenas-show-key-list">
                             <ul>
                                 <li>20 hoopers</li>
                                 <li>Day or Night</li>
@@ -122,9 +122,12 @@ class ArenaShow extends React.Component {
                             <div><i className="fas fa-exclamation" />Referees On-Site</div>
                         </div>
                     </div>
+                
+                </div>
+                <div classname="arena-show-map">
+                    <ArenaShowMap arena={this.props.arena} />
                 </div>
             </div>
-                <ArenaShowMap arena={this.props.arena} />
             </>
         )
     }
