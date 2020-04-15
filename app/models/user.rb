@@ -15,7 +15,7 @@ class User < ApplicationRecord
     has_many :bookings,
         primary_key: :id,
         foreign_key: :hooper_id,
-        class_name: :bookings
+        class_name: :Booking
     
     has_many :reviews,
         primary_key: :id,

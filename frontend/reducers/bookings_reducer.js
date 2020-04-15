@@ -8,10 +8,8 @@ import {
 
 const bookingsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
-    debugger
     switch (action.type) {
         case RECEIVE_BOOKINGS:
-            debugger
             return Object.assign({}, action.bookings);
         case RECEIVE_BOOKING:
             return Object.assign({}, oldState, {[action.booking.id]: action.booking})

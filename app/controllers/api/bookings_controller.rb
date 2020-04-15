@@ -9,6 +9,7 @@ class Api::BookingsController < ApplicationController
     end
 
     def create
+        debugger
         @booking = Booking.new(booking_params)
 
         if @booking.save
@@ -44,6 +45,7 @@ class Api::BookingsController < ApplicationController
     private
 
     def booking_params
-        params.require(:booking).require(:hooper_id, :arena_id, :date, :start_time, :end_time)
+        debugger
+        params.require(:booking).permit(:hooper_id, :arena_id, :date, :start_time, :end_time)
     end
 end
