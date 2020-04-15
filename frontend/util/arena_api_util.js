@@ -12,3 +12,11 @@ export const fetchArena = arenaId => (
         url: `api/arenas/${arenaId}`,        
     })
 );
+
+// export const fetchArena = arenaId => {
+//     debugger;
+//     return $.ajax({
+//         method: 'GET',
+//         url: `api/arenas/${arenaId}`   
+//     })
+// }

@@ -45,14 +45,14 @@ class SplashGreeting extends React.Component {
                 </button>
                 <ul className={this.state.active ? "dropdown-menu-on" : "dropdown-menu-off"} >
                     <li className="dropdown-first">Messages</li>
-                    <li className="dropdown-first">Trips</li>
+                    <li className="dropdown-first">Reservations</li>
                     <li className="dropdown-first">Saved</li>
                     <hr/>
                     <li className="dropdown-second">Manage Owned Hoops</li>
                     <li className="dropdown-second">Account</li>
                     <hr/>
                     <li className="dropdown-third">Help</li>
-                    <li className="dropdown-thid" onClick={logout} >Logout</li>
+                    <li className="dropdown-third" onClick={logout} >Logout</li>
                 </ul>
             </div>
         );

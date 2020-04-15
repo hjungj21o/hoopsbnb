@@ -47,7 +47,7 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="modal-form-container">
                 <form className="modal-form" onSubmit={this.handleSubmit}>
                     <div className="modal-close-x">
                         <p onClick={this.props.closeModal} >x</p>
@@ -83,7 +83,7 @@ class LoginForm extends React.Component {
                                 name="password"
                             />
                         </div>
-                    <input type="submit" value={this.props.formType} className="modal-submit-button" />
+                    <input type="submit" value="Log in" className="modal-submit-button" />
                     <div className="session-link">
                         <p className="session-link-text">Don't have an account? {this.props.otherForm}</p>
                     </div>

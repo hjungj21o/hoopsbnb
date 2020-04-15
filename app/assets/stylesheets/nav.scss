@@ -15,7 +15,6 @@
      z-index: 9999;
      width: 100%;
      background-color: white;
-    //  border-bottom: 1px rgb(139, 139, 139) solid;
      box-shadow: 1px 1px 1px rgb(139, 139, 139);
  }
 
@@ -41,9 +40,12 @@
 
  .form-button {
      padding: 0px 10px 0px 10px;
-     font-size: 18px;
+     font-size: 15px;
+     width: 50px;
      height: 45px;
+     text-align: center;
  }
+
 
   .nav button:first-child:hover {
      border-radius: 20px;
@@ -53,6 +55,7 @@
 
    .nav button:first-child {
      margin-right: 10px;
+
  }
 
  .logo img {
@@ -74,9 +77,6 @@
     position: relative;
 }
 
- .nonsplash-header-dropdown {
-     position: relative;
- }
 
  .dropdown-menu-off {
      display: none;
@@ -86,7 +86,8 @@
      display: block;
      position: absolute;
      background-color: white;
-     right: 30px;
+     top: 90%;
+     right: 7%;
      width: 240px;
      height: 340px;
      box-shadow: 1px 1px 5px rgb(102, 102, 102);
@@ -141,14 +142,14 @@
      border-radius: 21px;
  }
 
- .nav button:last-child {
+ .nonsplash-nav button:last-child {
     margin-right: 35px;
     border-radius: 21px;
     border: 1px black;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
  }
 
-  .nav button:last-child:hover {
+  .nonsplash-nav button:last-child:hover {
     height: 45px;
     border-radius: 21px;
     border: 1px black;
@@ -156,19 +157,21 @@
  }
 
 
- .form-button {
+ .nonsplash-form-button {
      padding: 0px 10px 0px 10px;
-     font-size: 18px;
+     font-size: 15px;
+     width: 50px;
      height: 45px;
+     text-align: center;
  }
 
-  .nav button:first-child:hover {
+  .nonsplash-nav button:first-child:hover {
      border-radius: 20px;
      height: 45px;
      background-color: rgba(223, 223, 223, 0.612);
  }
 
-   .nav button:first-child {
+   .nonsplash-nav button:first-child {
      margin-right: 10px;
  }
 
@@ -191,19 +194,16 @@
     position: relative;
 }
 
- .header-dropdown {
-     position: relative;
- }
-
- .dropdown-menu-off {
+ .nonsplash-dropdown-menu-off {
      display: none;
  }
 
- .dropdown-menu-on {
+ .nonsplash-dropdown-menu-on {
      display: block;
      position: absolute;
      background-color: white;
-     right: 30px;
+     top: 90%;
+     right: 3%;
      width: 240px;
      height: 340px;
      box-shadow: 1px 1px 5px rgb(102, 102, 102);
@@ -211,22 +211,22 @@
  }
 
  .fa-user-circle {
-     font-size: 30px;
+     font-size: 20px;
  }
 
- .dropdown-first {
+ .nonsplash-dropdown-first {
      font-weight: bold;
  }
 
- .dropdown-menu-on li:last-child {
+ .nonsplash-dropdown-menu-on li:last-child {
      cursor: pointer;
  }
 
- .dropdown-menu-on li {
+ .nonsplash-dropdown-menu-on li {
      padding: 17px 0 0 15px;
  }
 
- .dropdown-menu-on hr {
+ .nonsplash-dropdown-menu-on hr {
      width: 100%;
      margin-top: 25px;
  }

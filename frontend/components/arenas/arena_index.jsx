@@ -6,10 +6,6 @@ class ArenaIndex extends React.Component {
     constructor(props) {
         super(props);
     }
-    
-    componentDidMount() {
-        // this.props.fetchArenas();
-    }
 
     render() {
         if (!this.props.arenas) return <div>loading..</div>

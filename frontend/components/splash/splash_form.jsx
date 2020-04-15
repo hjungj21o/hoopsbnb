@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import SplashGreetingContainer from '../nav/splash_greeting_container';
 
 
-const Splash = () => {
+ const Splash = () => {
 
     return (
         <>
@@ -48,14 +48,19 @@ const Splash = () => {
                             />
                         </label>
                     </div>
+                    <div className="splash-form-input">
+                        <label className="splash-search-label">
+                            TEAM OR SOLO?
+                            <button className="splash-search-input">Add Teammates</button>
+                        </label>
+                    </div>
                     <div className="splash-search-submit-button-div">
-                        
-                            <button className="splash-search-submit-button">
-                        <Link to="/arenas">
+                        <button className="splash-search-submit-button">
+                            <Link to="/arenas">
                                 <i className="fas fa-search" />
                                 Search
-                        </Link>
-                                </button>
+                            </Link>
+                        </button>
                     </div>
                 </div>
             </div>

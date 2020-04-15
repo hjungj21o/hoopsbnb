@@ -28,10 +28,10 @@ class NonSplashGreeting extends React.Component {
 
         const sessionLinks = () => (
             <nav className="nonsplash-login-signup">
-                <div className="nav">
-                    <button className="form-button" onClick={() => openModal('login')}>Log in</button>
+                <div className="nonsplash-nav">
+                    <button className="nonsplash-form-button" onClick={() => openModal('login')}>Log in</button>
 
-                    <button className="form-button" onClick={() => openModal('signup')}>Sign up</button>
+                    <button className="nonsplash-form-button" onClick={() => openModal('signup')}>Sign up</button>
                 </div>
             </nav>
         );
@@ -43,16 +43,16 @@ class NonSplashGreeting extends React.Component {
                     &nbsp;
                     <i className="fas fa-user-circle" />
                 </button>
-                <ul className={this.state.active ? "dropdown-menu-on" : "dropdown-menu-off"} >
-                    <li className="dropdown-first">Messages</li>
-                    <li className="dropdown-first">Trips</li>
-                    <li className="dropdown-first">Saved</li>
+                <ul className={this.state.active ? "nonsplash-dropdown-menu-on" : "nonsplash-dropdown-menu-off"} >
+                    <li className="nonsplash-dropdown-first">Messages</li>
+                    <li className="nonsplash-dropdown-first">Reservations</li>
+                    <li className="nonsplash-dropdown-first">Saved</li>
                     <hr/>
-                    <li className="dropdown-second">Manage Owned Hoops</li>
-                    <li className="dropdown-second">Account</li>
+                    <li className="nonsplash-dropdown-second">Manage Owned Hoops</li>
+                    <li className="nonsplash-dropdown-second">Account</li>
                     <hr/>
-                    <li className="dropdown-third">Help</li>
-                    <li className="dropdown-thid" onClick={logout} >Logout</li>
+                    <li className="nonsplash-dropdown-third">Help</li>
+                    <li className="nonsplash-dropdown-third" onClick={logout} >Logout</li>
                 </ul>
             </div>
         );

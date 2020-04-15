@@ -1,6 +1,7 @@
 import React from 'react';
 import NonSplashGreetingContainer from '../nav/nonsplash_greeting_container';
 import ArenaShowMap from '../map/arena_show_map';
+import ArenaShowBookingBox from './arena_show_booking_box';
 
 
 class ArenaShow extends React.Component {
@@ -128,6 +129,7 @@ class ArenaShow extends React.Component {
                     <ArenaShowMap arena={this.props.arena} />
                 </div>
             </div>
+            <ArenaShowBookingBox arena={this.props.arena} />
             </>
         )
     }

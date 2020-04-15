@@ -53,3 +53,16 @@
     border-radius: 7px;
     height: 45px;
 }
+
+.splash-search-check-time {
+    display: flex;
+    width: 100%;
+}
+
+.splash-search-check-time > label:first-child {
+    margin: 0 -5.5px 0 0;
+}
+
+.splash-search-check-time > label:last-child {
+    margin: 0 0 0 -5.5px;
+}
