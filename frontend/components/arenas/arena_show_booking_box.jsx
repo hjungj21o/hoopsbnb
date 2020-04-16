@@ -13,14 +13,13 @@ class ArenaShowBooking extends React.Component {
             date: null,
             focused: null,
             startTime: "11:00",
-            endTime: "12:00"
+            endTime: "12:00",
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger;
         if (this.props.currentUser) {
             let arena_id = this.props.arena.id;
             let start_time = this.state.startTime;
@@ -35,7 +34,6 @@ class ArenaShowBooking extends React.Component {
             };
             const history = this.props.history;
             const userId = this.props.currentUser.id;
-            debugger;
             this.props.createBooking(newBooking)
                 .then(() => history.push(`/users/${userId}/bookings`));
         } else {

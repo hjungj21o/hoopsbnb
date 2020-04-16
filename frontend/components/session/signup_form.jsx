@@ -74,9 +74,6 @@ class SignUpForm extends React.Component {
                                 name="lastName"
                                 />
                             </label>
-                            <div className="modal-">
-                                Make sure it matches the name on your government ID.
-                            </div>
                             <label className="modal-container">
                                 <input 
                                 className="signup-form"

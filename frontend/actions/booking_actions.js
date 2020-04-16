@@ -5,10 +5,14 @@ export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 export const REMOVE_BOOKING = 'REMOVE_BOOKING';
 
 
-const receiveBookings = bookings => ({
-    type: RECEIVE_BOOKINGS,
-    bookings
-});
+const receiveBookings = bookings => {
+    return ({
+        type: RECEIVE_BOOKINGS,
+        bookings: bookings.bookings,
+        arenas: bookings.arenas
+
+    })
+};
 
 const receiveBooking = booking => ({
     type: RECEIVE_BOOKING,

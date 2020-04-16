@@ -1,4 +1,5 @@
 import { RECEIVE_ARENAS, RECEIVE_ARENA } from '../actions/arena_actions';
+import { RECEIVE_BOOKINGS } from '../actions/booking_actions';
 
 const arenasReducer = ( oldState = {}, action ) => {
     Object.freeze(oldState);
@@ -7,6 +8,8 @@ const arenasReducer = ( oldState = {}, action ) => {
             return Object.assign({}, action.arenas);
         case RECEIVE_ARENA:
             return Object.assign({}, oldState, {[action.arena.id]: action.arena});
+        case RECEIVE_BOOKINGS:
+            return action.arenas
         default: 
             return oldState;
     }

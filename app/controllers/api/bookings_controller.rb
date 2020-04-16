@@ -1,7 +1,7 @@
 class Api::BookingsController < ApplicationController
 
     def index
-        @bookings = Booking.all
+        @bookings = User.find(params[:user_id]).bookings
     end
 
     def show
@@ -9,7 +9,6 @@ class Api::BookingsController < ApplicationController
     end
 
     def create
-        debugger
         @booking = Booking.new(booking_params)
 
         if @booking.save
@@ -45,7 +44,6 @@ class Api::BookingsController < ApplicationController
     private
 
     def booking_params
-        debugger
         params.require(:booking).permit(:hooper_id, :arena_id, :date, :start_time, :end_time)
     end
 end

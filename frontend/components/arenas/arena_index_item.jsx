@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ArenaIndexItem = ( { arena } ) => {
+const arenaIndexItem = ( { arena } ) => {
     if (Object.keys(arena).length === 0) return <div>fetching data...</div>
     return (
         <li className="arena-index-item">
@@ -44,4 +44,4 @@ const ArenaIndexItem = ( { arena } ) => {
     )
 }
 
-export default ArenaIndexItem;
+export default arenaIndexItem;
