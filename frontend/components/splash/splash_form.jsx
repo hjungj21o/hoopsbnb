@@ -11,7 +11,7 @@ class Splash extends React.Component {
         super(props)
 
         this.state = {
-            date: "",
+            date: null,
             focused: null
         }
     }
@@ -69,7 +69,7 @@ class Splash extends React.Component {
                         <div className="splash-form-input">
                             <label className="splash-search-label">
                                 TEAM OR SOLO?
-                                <button className="splash-search-input">Add Teammates</button>
+                                <button type="text" className="splash-search-button">Add Teammates</button>
                             </label>
                         </div>
                         <div className="splash-search-submit-button-div">

@@ -3,17 +3,18 @@
     width: 600px;
     margin: 0 auto;
     flex-direction: column;
+    margin-right: 35px;
 }
 
 .arena-details-name {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
 }
 
 .arena-details-name div:first-child {
     font-size: 32px;
     font-weight: bold;
+    padding-bottom: 15px;
 }
 
 .arena-title-city p {
@@ -40,8 +41,8 @@
 
 .arena-gm-descriptions {
     padding: 20px 0;
-    border-bottom: solid black 1px;
-    border-top: solid black 1px;
+    border-bottom: solid 1px rgb(235, 235, 235);
+    border-top: solid 1px rgb(235, 235, 235);
 }
 
 .arena-gm-title {
@@ -62,7 +63,7 @@
 
 .arena-long-description-container {
     padding: 25px 0;
-    border-bottom: 1px solid black;
+    border-bottom: solid 1px rgb(235, 235, 235);
 }
 
 .arena-long-description-contact-host {

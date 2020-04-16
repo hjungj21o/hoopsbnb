@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 import { createBooking } from '../../actions/booking_actions';
 
 const msp = (state, ownProps) => {
-    debugger;
     return ({
         currentUser: state.entities.users[state.session.id],
         arena: state.entities.arenas[ownProps.match.params.arenaId]
@@ -13,7 +12,6 @@ const msp = (state, ownProps) => {
 };
 
 const mdp = dispatch => {
-    debugger;
     return ({
         openModal: modal => dispatch(openModal(modal)),
         createBooking: booking => dispatch(createBooking(booking))

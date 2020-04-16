@@ -25,7 +25,8 @@
 }
 
 .splash-search-label {
-    display: block;
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     padding: 5px;
 }
@@ -59,10 +60,16 @@
     width: 100%;
 }
 
-.splash-search-check-time > label:first-child {
-    margin: 0 -5.5px 0 0;
+.splash-search-check-time > label input {
+    margin: 0 -5px 0 0;
+    width: 215px;
+    // width: fit-content;
 }
 
 .splash-search-check-time > label:last-child {
-    margin: 0 0 0 -5.5px;
+    margin: 0 0 0 -5px;
+}
+
+#date-picker {
+    width: 100%;
 }

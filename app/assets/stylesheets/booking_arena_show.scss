@@ -1,20 +1,83 @@
 .arena-show-container {
     display: flex;
     // justify-content: center;
+    height: 100%;
     width: 1000px;
     margin: 0 auto;
 }
 
 .arenas-booking-form {
-    height: 500px;
-    width: 300px;
-}
-
-.arenas-booking-container {
+    position: sticky;
+    height: 100%;
+    width: 380px;
     display: flex;
     flex-direction: column;
-    position: sticky;
-    top: 670px;
-    // padding-right: 500px;
-    // bottom: 300px;
+    padding: 20px;
+    top: 105px;
+    padding-top: 20px;
+    border:solid 1px rgb(235, 235, 235);
+}
+
+.arenas-booking-pricing {
+    display: flex;
+}
+
+.booking-dollars {
+    font-weight: bold;
+    padding-right: 3px;
+    font-size: 18px;
+}
+
+.booking-per-hour {
+    font-size: 14px;
+    text-align: bottom;
+}
+
+.booking-star {
+    font-size: 12px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px rgb(235, 235, 235);
+    font-weight: bold;
+}
+
+.booking-star i {
+    color: rgb(245,61,78);
+    padding-right: 3px;
+}
+
+.booking-search-label {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    width: 100%;
+    align-items: center;
+}
+
+#booking-date-picker {
+    width: 100%;
+}
+
+.booking-reserve-button {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.booking-reserve-button p {
+    margin: 0 auto;
+    font-size: 12px;
+    padding-top: 12px;
+}
+
+.reserve-button {
+    width: 100%;
+    font-size: 18px;
+    background-color: rgb(0, 86, 163);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.arena-title-city-pics {
+    margin-bottom: 30px;
 }

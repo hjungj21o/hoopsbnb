@@ -30,10 +30,11 @@ export const fetchBooking = (bookingId) => dispatch => (
         .then(booking => dispatch(receiveBooking(booking)))
 );
 
-export const createBooking = (booking) => dispatch => (
+export const createBooking = (booking) => dispatch => {
+    return (
     BookingsApiUtil.createBooking(booking)
         .then(booking => dispatch(receiveBooking(booking)))
-);
+)};
 
 export const updateBooking = booking => dispatch => (
     BookingsApiUtil.updateBooking(booking)
