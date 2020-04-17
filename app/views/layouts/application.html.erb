@@ -4,7 +4,9 @@
     <title>Hoopsbnb</title>
     <link href='https://fonts.googleapis.com/css?family=Scada' 
     rel='stylesheet' type='text/css'>
-    <link rel=“stylesheet” href=“https://use.fontawesome.com/releases/v5.6.3/css/all.css” integrity=“sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/” crossorigin=“anonymous”>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/cac26a4ea7.js' crossorigin='anonymous'></script>
+    <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
