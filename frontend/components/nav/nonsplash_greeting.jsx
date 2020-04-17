@@ -45,8 +45,8 @@ class NonSplashGreeting extends React.Component {
                     <i className="fas fa-user-circle" />
                 </button>
                 <ul className={this.state.active ? "nonsplash-dropdown-menu-on" : "nonsplash-dropdown-menu-off"} >
+                    <li className="dropdown-first"><Link to={`/users/${currentUser.id}/bookings`}>Reservations</Link></li>
                     <li className="nonsplash-dropdown-first">Messages</li>
-                    <li className="nonsplash-dropdown-first">Reservations</li>
                     <li className="nonsplash-dropdown-first">Saved</li>
                     <hr/>
                     <li className="nonsplash-dropdown-second">Manage Owned Hoops</li>
