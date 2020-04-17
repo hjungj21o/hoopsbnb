@@ -6,13 +6,19 @@
 .arenas-map-container {
     min-height: 95vh;
     grid-gap: 5px;
-    padding: 0 35px 0 35px;
+    padding: 20px 35px 0 35px;
     display: flex;
 }
 
 .search-map-container {
-    max-height: 100%;
+    max-height: 85%;
     width: 100%;
+    display: flex;
+    position: relative;
+}
+
+#map-container {
+    position: absolute;
 }
 
 

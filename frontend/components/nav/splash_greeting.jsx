@@ -44,8 +44,8 @@ class SplashGreeting extends React.Component {
                     <i className="fas fa-user-circle" />
                 </button>
                 <ul className={this.state.active ? "dropdown-menu-on" : "dropdown-menu-off"} >
+                    <li className="dropdown-first"><Link to={`/users/${currentUser.id}/bookings`}>Reservations</Link></li>
                     <li className="dropdown-first">Messages</li>
-                    <li className="dropdown-first">Reservations</li>
                     <li className="dropdown-first">Saved</li>
                     <hr/>
                     <li className="dropdown-second">Manage Owned Hoops</li>
@@ -62,7 +62,7 @@ class SplashGreeting extends React.Component {
             <>
             <nav className="fixed-nav-bar">
                 <div className="nav-left">
-                    <Link to="/" className="logo"><img src={window.logo} alt="logo" /></Link>
+                        <Link to="/" className="logo"><img src={"https://hoopsbnb-seed.s3.amazonaws.com/logo.png"} alt="logo" /></Link>
                 </div>
                 <div className="nav-right">
                     {whichUser}
@@ -75,32 +75,3 @@ class SplashGreeting extends React.Component {
 }
 
 export default SplashGreeting;
-
-// import React from 'react';
-
-
-
-// const Greeting = ( { logout, currentUser, openModal } ) => {
-//     // debugger;
-//     const sessionLinks = () => (
-//         <div className="nav">
-//             <nav className="login-signup">
-//                 <button className="form-button" onClick={() => openModal('login')}>Login</button>
-                
-//                 <button className="form-button" onClick={() => openModal('signup')}>Signup</button>
-//             </nav>
-//         </div>
-//     );
-//     const personalGreeting = () => (
-//         <hgroup className="header-group">
-//             <h2 className="header-name">Hi, {currentUser.firstName}!</h2>
-//             <button className="header-button" onClick={logout}>Log Out</button>
-//         </hgroup>
-//     );
-//     // debugger;
-
-//     return currentUser ? personalGreeting() : sessionLinks();
-// };
-
-
-// export default Greeting;

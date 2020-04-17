@@ -65,8 +65,8 @@ class ArenaShow extends React.Component {
                                     <div>
                                     {arena.name}
                                     </div>
-                                    <div className="gm-pic">
-                                        {/* <img src="lebron_james"/> */}
+                                    <div className="gm-pic-container">
+                                        <img className="gm-pic" src={"https://hoopsbnb-seed.s3.amazonaws.com/lebron_cropped.png"}/>
                                         <p>Lebron</p>
                                     </div>
                                 </div>

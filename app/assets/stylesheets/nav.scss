@@ -77,6 +77,10 @@
     position: relative;
 }
 
+.header-name:hover {
+    box-shadow: 1px 1px 5px rgb(102, 102, 102);
+}
+
 
  .dropdown-menu-off {
      display: none;
@@ -87,7 +91,7 @@
      position: absolute;
      background-color: white;
      top: 90%;
-     right: 35px;
+     right: 85px;
      width: 240px;
      height: 340px;
      box-shadow: 1px 1px 5px rgb(102, 102, 102);
@@ -192,6 +196,10 @@
     height: 40px;
     padding: 0px 10px;
     position: relative;
+}
+
+.nonsplash-header-name:hover {
+    box-shadow: 1px 1px 5px rgb(102, 102, 102);
 }
 
  .nonsplash-dropdown-menu-off {

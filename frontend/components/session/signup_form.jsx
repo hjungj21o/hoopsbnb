@@ -35,7 +35,24 @@ class SignUpForm extends React.Component {
     }
 
     handleErrors() {
+        // const firstNameError = <li>Make sure it matches the name on your government ID.</li>
+        // const lastNameError = <li>Make sure it matches the name on your government ID.</li>
+        // const userNameError = <li></li>
+        // const PasswordError = <li>Make sure it's longer than 6 characters.</li>
+        // const emailError = <li>We'll email you confirmations and receipts.</li>
         let errors = this.props.errors.map((error, i) => {
+            // if (error.includes("First")) {
+            //     firstNameError = <li>{error}</li>
+            // } else if (error.includes("Last")) {
+            //     lastNameError= <li>{error}</li>
+            // } else if (error.includes("Username")) {
+            //     userNameError= <li>{error}</li>
+            // } else if (error.includes("Email")) {
+            //     emailError = <li>{error}</li>
+            // } else if (error.includes("Password")) {
+            //     passwordError = <li>{error}</li>
+            // }
+
             return <li key={`error-${i}`}>{error}</li>
         })
         return (

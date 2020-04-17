@@ -9,6 +9,7 @@ const arenasReducer = ( oldState = {}, action ) => {
         case RECEIVE_ARENA:
             return Object.assign({}, oldState, {[action.arena.id]: action.arena});
         case RECEIVE_BOOKINGS:
+            if (!action.arenas) action.arenas = {};
             return action.arenas
         default: 
             return oldState;

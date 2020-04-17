@@ -66,12 +66,12 @@ class Splash extends React.Component {
                                 />
                             </label>
                         </div>
-                        <div className="splash-form-input">
+                        {/* <div className="splash-form-input">
                             <label className="splash-search-label">
                                 TEAM OR SOLO?
                                 <button type="text" className="splash-search-button">Add Teammates</button>
                             </label>
-                        </div>
+                        </div> */}
                         <div className="splash-search-submit-button-div">
                             <button className="splash-search-submit-button">
                                 <Link to="/arenas">

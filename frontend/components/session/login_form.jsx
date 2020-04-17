@@ -52,40 +52,40 @@ class LoginForm extends React.Component {
                     <div className="modal-close-x">
                         <p onClick={this.props.closeModal} >x</p>
                     </div>
-                        {this.handleErrors()}
-                        <br></br>
+                    {this.handleErrors()}
+                    <br></br>
+                    <div className="modal-container">
+                        <input
+                            className="signup-form"
+                            type="text"
+                            placeholder='username'
+                            value={this.state.username}
+                            onChange={this.update('username')}
+                            name="username"
+                        />
+                    </div>
+                    <div className="modal-container">
+                        <input
+                            className="signup-form"
+                            type="password"
+                            placeholder='password'
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                            name="password"
+                        />
+                    </div>
+                    <input type="submit" value="Log in" className="modal-submit-button" />
+                    <div className="session-link">
+                            <p className="session-link-text">Don't have an account? {this.props.otherForm}</p>
+                            <br />
+                        <div className="hr-line">
+                            <hr />
+                                OR
+                            <hr />
+                        </div>
                         <div className="demo-login-button">
                             <button onClick={this.handleDemoLogin}>Demo Login</button>
                         </div>
-                        <br />
-                    <div className="hr-line">
-                        <hr />
-                        OR
-                        <hr />
-                    </div>
-                        <div className="modal-container">
-                            <input
-                                className="signup-form"
-                                type="text"
-                                placeholder='username'
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                name="username"
-                            />
-                        </div>
-                        <div className="modal-container">
-                            <input
-                                className="signup-form"
-                                type="password"
-                                placeholder='password'
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                name="password"
-                            />
-                        </div>
-                    <input type="submit" value="Log in" className="modal-submit-button" />
-                    <div className="session-link">
-                        <p className="session-link-text">Don't have an account? {this.props.otherForm}</p>
                     </div>
                 </form>
             </div>

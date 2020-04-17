@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './searchbar';
 
 class NonSplashGreeting extends React.Component {
     constructor (props) {
@@ -64,6 +65,7 @@ class NonSplashGreeting extends React.Component {
                 <div className="nav-left">
                     <Link to="/" className="nonsplash-logo"><img src={window.logo_ball} alt="logo" /></Link>
                 </div>
+                <SearchBar />
                 <div className="nav-right">
                     {whichUser}
                 </div>
@@ -75,32 +77,3 @@ class NonSplashGreeting extends React.Component {
 }
 
 export default NonSplashGreeting;
-
-// import React from 'react';
-
-
-
-// const Greeting = ( { logout, currentUser, openModal } ) => {
-//     // debugger;
-//     const sessionLinks = () => (
-//         <div className="nav">
-//             <nav className="login-signup">
-//                 <button className="form-button" onClick={() => openModal('login')}>Login</button>
-                
-//                 <button className="form-button" onClick={() => openModal('signup')}>Signup</button>
-//             </nav>
-//         </div>
-//     );
-//     const personalGreeting = () => (
-//         <hgroup className="header-group">
-//             <h2 className="header-name">Hi, {currentUser.firstName}!</h2>
-//             <button className="header-button" onClick={logout}>Log Out</button>
-//         </hgroup>
-//     );
-//     // debugger;
-
-//     return currentUser ? personalGreeting() : sessionLinks();
-// };
-
-
-// export default Greeting;

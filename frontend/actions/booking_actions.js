@@ -22,7 +22,7 @@ const receiveBooking = booking => ({
 const removeBooking = bookingId => ({
     type: REMOVE_BOOKING,
     bookingId
-})
+});
 
 export const fetchBookings = (userId) => dispatch => (
     BookingsApiUtil.fetchBookings(userId)

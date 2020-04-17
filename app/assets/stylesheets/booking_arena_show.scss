@@ -57,6 +57,27 @@
     width: 100%;
 }
 
+.booking-search-label {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.booking-search-label label div:first-child {
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 0px 5px 0px;
+    font-family: Montserrat !important;
+}
+
+.booking-search-input {
+    width: 100%;
+    font-size: 16px;
+    padding: 9px 0px 9px 0px;
+    border-radius: 3px;
+    border: 1px solid lightgray
+}
+
 .booking-reserve-button {
     display: flex;
     flex-direction: column;
@@ -76,6 +97,10 @@
     padding: 10px;
     color: white;
     border-radius: 5px;
+}
+
+.reserve-log-in {
+    background-color: rgb(245,61,78);
 }
 
 .arena-title-city-pics {

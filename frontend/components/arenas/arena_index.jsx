@@ -8,13 +8,14 @@ class ArenaIndex extends React.Component {
     }
 
     render() {
-        if (!this.props.arenas) return <div>loading..</div>
+        if (!this.props.arenas) return <div>loading..</div>;
         const ArenaLi = this.props.arenas.map((arena, i) => {
             return <ArenaIndexItem 
                 key={ `${i}` } 
                 arena={ arena }
             />
-        })
+        });
+        
         return (
             <div className="arenas-search-result-container">
                 <div className="arenas-search-title">
@@ -26,8 +27,8 @@ class ArenaIndex extends React.Component {
                     </ul>
                 </div>
             </div>
-        )
-    }
+        );
+    };
 }
 
 export default ArenaIndex;

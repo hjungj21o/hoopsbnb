@@ -1,0 +1,105 @@
+.nobooking-index-container {
+    display: flex;
+    padding: 35px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nobooking-index-test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.beep {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.nobooking-text {
+    font-size: 45px;
+    width: 70%;
+    padding-top: 25px;
+}
+
+.nobooking-splash {
+    background-color: rgb(255,79,90);
+    color: white;
+    padding: 20px 35px 20px 35px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+    
+.booking-upcoming-container {
+    padding: 1000px;
+    padding: 35px;
+    // background-image: url("https://hoopsbnb-seed.s3.amazonaws.com/streetball_illustration.jpg");
+    background-size: cover;
+    width: 80%;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.booking-arena-picture img {
+    width: 300px;
+    height: 200px;
+    border-radius: 3px;
+}
+
+.bookings-confirmed-tile {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    // float: left;
+}
+
+.booking-confirmation-num {
+    font-size: 12px;
+}
+
+
+.bookings-index-item:not(:first-child) {
+    padding-left: 20px;
+}
+
+.booking-upcoming-title {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.booking-upcoming-question {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.bookings-index-confirm {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.bookings-confirmed {
+    font-size: 18px;
+}
+
+.booking-index-time {
+    padding-bottom: 10px;
+}
+
+.booking-cancel-button {
+    background-color: rgb(249,62,79);
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0 10px 0;
+    border-radius: 3px;
+    text-align: center;
+}
+
+
+

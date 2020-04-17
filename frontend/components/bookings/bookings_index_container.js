@@ -4,15 +4,17 @@ import { fetchBookings, destroyBooking } from '../../actions/booking_actions';
 import { withRouter } from 'react-router-dom';
 
 
-const msp = state => {
+const msp = (state) => {
     return {
-        bookings: Object.values(state.entities.bookings)
+        bookings: Object.values(state.entities.bookings),
+        arenas: state.entities.arenas,
+        currentUser: state.entities.users[state.session.id]
     }
 }
 
 const mdp = dispatch => {
     return {
-        fetchBookings: (bookingId) => dispatch(fetchBookings(bookingId)),
+        fetchBookings: (userId) => dispatch(fetchBookings(userId)),
         destroyBooking: (bookingId) => dispatch(destroyBooking(bookingId))
     }
 }

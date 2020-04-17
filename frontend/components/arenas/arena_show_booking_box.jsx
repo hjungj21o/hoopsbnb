@@ -43,11 +43,11 @@ class ArenaShowBooking extends React.Component {
 
     render() {
         const toBookingIndex = () => (
-            <input className="reserve-button" type="submit" value="Reserve" />
+            <input className="reserve-button reserve-confirm" type="submit" value="Reserve" />
         )
 
         const bookingLogin = () => (
-            <input className="reserve-button" type="submit" value="Log In to Reserve" />
+            <input className="reserve-button reserve-log-in" type="submit" value="Log In to Reserve" />
         )
         const bookingHasUser = this.props.currentUser ? toBookingIndex() : bookingLogin()
 
@@ -78,11 +78,30 @@ class ArenaShowBooking extends React.Component {
                         </div>
                     </label>
                 </div>
-                <div className="booking-form-input">
+                <div className="booking-times booking-times-check-in">
+                    <label className="booking-search-label">
+                        Check-In 
+                            <input
+                        className="booking-search-input"
+                        placeholder="11:00"
+                        type="time"
+                    />
+                    </label>
+                </div>
+                <div className="booking-times booking-times-check-in">
+                    <label className="booking-search-label">
+                        Check-Out
+                                <input
+                            className="booking-search-input"
+                            type="time"
+                        />
+                    </label>
+                </div>
+                {/* <div className="booking-form-input">
                     <label className="booking-search-label">
                         <button className="booking-search-input">Add Teammates</button>
                     </label>
-                </div>
+                </div> */}
                 <div className="booking-reserve-button">
                     {bookingHasUser}
                     <p>You won't be charged. Pinky promise.</p>
