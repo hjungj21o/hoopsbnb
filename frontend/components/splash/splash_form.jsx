@@ -5,7 +5,6 @@ import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
-
 class Splash extends React.Component {
     constructor(props) {
         super(props)
@@ -15,7 +14,6 @@ class Splash extends React.Component {
             focused: null
         }
     }
-
 
     render() {
         return (
