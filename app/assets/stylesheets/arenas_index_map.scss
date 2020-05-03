@@ -11,16 +11,12 @@
 }
 
 .search-map-container {
-    max-height: 85%;
+    max-height: 100vh;
     width: 100%;
     display: flex;
-    position: relative;
+    position: sticky !important;
+    top: 85px;
 }
-
-#map-container {
-    position: absolute;
-}
-
 
 .arena-index-item {
     padding: 20px 0px;
@@ -41,7 +37,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 .key-list:not(:first-child) {
@@ -82,7 +77,6 @@
     display: flex;
     width: 100%;
     position: relative;
-  
 }
 
 .arenas-container {

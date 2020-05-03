@@ -6,23 +6,29 @@ export const REMOVE_BOOKING = 'REMOVE_BOOKING';
 
 
 const receiveBookings = bookings => {
+    debugger;
     return ({
         type: RECEIVE_BOOKINGS,
         bookings: bookings.bookings,
         arenas: bookings.arenas
-
     })
 };
 
-const receiveBooking = booking => ({
-    type: RECEIVE_BOOKING,
-    booking
-});
+const receiveBooking = booking => {
+    debugger;
+    return ({
+        type: RECEIVE_BOOKING,
+        booking
+    })
+};
 
-const removeBooking = bookingId => ({
-    type: REMOVE_BOOKING,
-    bookingId
-});
+const removeBooking = bookingId => {
+    debugger;
+    return ({
+        type: REMOVE_BOOKING,
+        bookingId
+    })
+};
 
 export const fetchBookings = (userId) => dispatch => (
     BookingsApiUtil.fetchBookings(userId)

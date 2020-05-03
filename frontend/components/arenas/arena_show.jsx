@@ -67,7 +67,7 @@ class ArenaShow extends React.Component {
                                     </div>
                                     <div className="gm-pic-container">
                                         <img className="gm-pic" src={"https://hoopsbnb-seed.s3.amazonaws.com/lebron_cropped.png"}/>
-                                        <p>Lebron</p>
+                                        <p>LeBron</p>
                                     </div>
                                 </div>
 
@@ -84,7 +84,7 @@ class ArenaShow extends React.Component {
                     
                         <div className="arena-gm-container">
                             <div className="arena-gm-descriptions">
-                                <div className="arena-gm-title"><i className="fas fa-medal"></i>Lebron is a Superhost</div>
+                                <div className="arena-gm-title"><i className="fas fa-medal"></i>LeBron is a Superhost</div>
                                 <div className="arena-gm-expand">
                                     Superhosts are experienced, 
                                     highly rated hosts who are committed to providing 

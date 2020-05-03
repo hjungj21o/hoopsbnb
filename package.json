@@ -8,7 +8,7 @@
     "@babel/runtime": "^7.9.2",
     "@wojtekmaj/react-timerange-picker": "^2.4.0",
     "babel-loader": "^8.1.0",
-    "moment": "^2.24.0",
+    "moment": "2.24.0",
     "react": "^16.13.1",
     "react-date-picker": "^8.0.1",
     "react-dates": "^21.8.0",

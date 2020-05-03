@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class SplashGreeting extends React.Component {
     constructor (props) {
@@ -9,6 +9,7 @@ class SplashGreeting extends React.Component {
             active: false
         };
         this.toggleClass = this.toggleClass.bind(this);
+        this.linkToReservations = this.linkToReservations.bind(this);
     }
     
     componentDidUpdate() {
@@ -19,8 +20,11 @@ class SplashGreeting extends React.Component {
 
     toggleClass() {
         const currentState = this.state.active
-        this.setState( {active: !currentState } )
+        this.setState( { active: !currentState } )
+    }
 
+    linkToReservations() {
+        this.props.history.push(`/users/${this.props.currentUser.id}/bookings`)
     }
  
     render() {
@@ -29,30 +33,25 @@ class SplashGreeting extends React.Component {
         const sessionLinks = () => (
             <nav className="login-signup">
                 <div className="nav">
-                    <button className="form-button" onClick={() => openModal('login')}>Log in</button>
-
+                    <a href="https://github.com/hjungj21o/hoopsbnb" target="_blank" className="github">Github</a>
                     <button className="form-button" onClick={() => openModal('signup')}>Sign up</button>
+                    <button className="form-button" onClick={() => openModal('login')}>Log in</button>
                 </div>
             </nav>
         );
 
         const personalGreeting = () => (
             <div className="header-dropdown">
-                <button className="header-name" onClick={this.toggleClass} >
+                <a href="https://github.com/hjungj21o/hoopsbnb" target="_blank" className="github">Github</a>
+                <button className="header-name" onClick={this.toggleClass} onBlur={this.toggleClass} >
                     {currentUser.first_name}
                     &nbsp;
                     <i className="fas fa-user-circle" />
                 </button>
                 <ul className={this.state.active ? "dropdown-menu-on" : "dropdown-menu-off"} >
-                    <li className="dropdown-first"><Link to={`/users/${currentUser.id}/bookings`}>Reservations</Link></li>
-                    <li className="dropdown-first">Messages</li>
-                    <li className="dropdown-first">Saved</li>
+                    <li className="dropdown-first" onMouseDown={this.linkToReservations}>Reservations</li>
                     <hr/>
-                    <li className="dropdown-second">Manage Owned Hoops</li>
-                    <li className="dropdown-second">Account</li>
-                    <hr/>
-                    <li className="dropdown-third">Help</li>
-                    <li className="dropdown-third" onClick={logout} >Logout</li>
+                    <li className="dropdown-second" onMouseDown={logout}>Logout</li>
                 </ul>
             </div>
         );
@@ -74,4 +73,4 @@ class SplashGreeting extends React.Component {
     }
 }
 
-export default SplashGreeting;
+export default withRouter(SplashGreeting);

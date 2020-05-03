@@ -10,6 +10,7 @@ class NonSplashGreeting extends React.Component {
             active: false
         };
         this.toggleClass = this.toggleClass.bind(this);
+        this.linkToReservations = this.linkToReservations.bind(this);
     }
     
     componentDidUpdate() {
@@ -21,7 +22,10 @@ class NonSplashGreeting extends React.Component {
     toggleClass() {
         const currentState = this.state.active
         this.setState( {active: !currentState } )
+    }
 
+    linkToReservations() {
+        this.props.history.push(`/users/${this.props.currentUser.id}/bookings`)
     }
  
     render() {
@@ -30,8 +34,8 @@ class NonSplashGreeting extends React.Component {
         const sessionLinks = () => (
             <nav className="nonsplash-login-signup">
                 <div className="nonsplash-nav">
+                    <a href="https://github.com/hjungj21o/hoopsbnb" target="_blank" className="github">Github</a>
                     <button className="nonsplash-form-button" onClick={() => openModal('login')}>Log in</button>
-
                     <button className="nonsplash-form-button" onClick={() => openModal('signup')}>Sign up</button>
                 </div>
             </nav>
@@ -39,21 +43,16 @@ class NonSplashGreeting extends React.Component {
 
         const personalGreeting = () => (
             <div className="nonsplash-header-dropdown">
-                <button className="nonsplash-header-name" onClick={this.toggleClass} >
+                <a href="https://github.com/hjungj21o/hoopsbnb" target="_blank" className="github">Github</a>
+                <button className="nonsplash-header-name" onClick={this.toggleClass} onBlur={this.toggleClass} >
                     {currentUser.first_name}
                     &nbsp;
                     <i className="fas fa-user-circle" />
                 </button>
-                <ul className={this.state.active ? "nonsplash-dropdown-menu-on" : "nonsplash-dropdown-menu-off"} >
-                    <li className="dropdown-first"><Link to={`/users/${currentUser.id}/bookings`}>Reservations</Link></li>
-                    <li className="nonsplash-dropdown-first">Messages</li>
-                    <li className="nonsplash-dropdown-first">Saved</li>
+                <ul className={this.state.active ? "nonsplash-dropdown-menu-on" : "nonsplash-dropdown-menu-off"}>
+                    <li className="nonsplash-dropdown-first" onMouseDown={this.linkToReservations}>Reservations</li>
                     <hr/>
-                    <li className="nonsplash-dropdown-second">Manage Owned Hoops</li>
-                    <li className="nonsplash-dropdown-second">Account</li>
-                    <hr/>
-                    <li className="nonsplash-dropdown-third">Help</li>
-                    <li className="nonsplash-dropdown-third" onClick={logout} >Logout</li>
+                    <li className="nonsplash-dropdown-second" onMouseDown={logout} >Logout</li>
                 </ul>
             </div>
         );
