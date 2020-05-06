@@ -107,10 +107,19 @@
     border: 1px black solid;
 }
 
+.arena-pics:hover div {
+    filter: brightness(75%);
+}
+
+
 .arena-main-pic {
     height: 100%;
     width: 50%;
     overflow: hidden;
+}
+
+.arena-main-pic:hover {
+    filter: brightness(115%) !important;
 }
 
 .arena-main-pic img {
@@ -122,7 +131,6 @@
 }
 
 .arena-main-pic img:hover {
-    // display: flex;
     transition: .5s height ease;
     height: 105%;
     align-items: center;
@@ -135,6 +143,10 @@
     flex-wrap: wrap;
     height: 100%;
     width: 50%;
+}
+
+.arena-sub-pics:hover {
+    filter: brightness(115%) !important;
 }
 
 .arena-sub-pic {
@@ -153,7 +165,6 @@
 }
 
 .arena-sub-pic img:hover {
-    // transform: scale(1.1);
     display: flex;
     transition: .5s height ease;
     height: 110%;
@@ -161,6 +172,7 @@
     justify-content: center;
     object-fit: cover;
     overflow: hidden;
+    filter: brightness(125%) !important;
 }
 
 .search-map-container-show {
