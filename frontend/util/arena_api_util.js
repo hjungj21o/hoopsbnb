@@ -13,14 +13,15 @@ export const fetchArena = arenaId => (
     })
 );
 
-export const fetchArenasOnSearchResults = (keyword, startDate, endDate) => (
-    $.ajax({
+export const arenasSearch = (keyword, startDate, endDate) => {
+    debugger;
+    return $.ajax({
         method: 'GET',
-        url: '/api/search',
+        url: '/api/arenas',
         data: {
             keyword,
             start_date: startDate,
             end_date: endDate
         }
     })
-)
+}

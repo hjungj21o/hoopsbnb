@@ -1,7 +1,12 @@
 class Api::ArenasController < ApplicationController
 
     def index
-        @arenas = Arena.in_bounds(params[:filters])
+        debugger
+        if params[:keyword]
+            @arenas = Arena.in_bounds(params[:filters]).search_by_keyword(params[:keyword])
+        else
+            @arenas = Arena.in_bounds(params[:filters])
+        end
         render :index
     end
 
@@ -22,6 +27,6 @@ class Api::ArenasController < ApplicationController
     private
 
     def arena_params
-        params.require(:arenas).permit(:name, :address, :city, :gm_id, :description, :price, :lat, :lng, :keyword, :start_date, :end_date)
+        params.require(:arenas).permit(:name, :address, :city, :gm_id, :description, :price, :lat, :lng, :keyword)
     end
 end

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -17,7 +17,9 @@ class SearchBar extends React.Component {
         debugger
         e.preventDefault();
 
-        this.props.fetchKeyword(this.state.keyword);
+        this.props.arenasSearch(this.state.keyword)
+            .then(this.props.history.push("/arenas/search"));
+        debugger;
     }
 
     searchUpdate(e) {

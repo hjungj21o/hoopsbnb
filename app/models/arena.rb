@@ -23,6 +23,7 @@ class Arena < ApplicationRecord
         #   "northEast"=> {"lat"=>"37.80971", "lng"=>"-122.39208"},
         #   "southWest"=> {"lat"=>"37.74187", "lng"=>"-122.47791"}
         # }
+        debugger
         Arena.where([
             "lat < ? AND lat > ? AND lng > ? AND lng < ?", 
             bounds[:northEast][:lat], 
@@ -33,11 +34,12 @@ class Arena < ApplicationRecord
     end
 
     def self.search_by_keyword(keyword)
+        debugger
         match = "%#{keyword}%"
         Arena.where("city ILIKE ?", match)
             .or(Arena.where("address ILIKE ?", match))
             .or(Arena.where("description ILIKE ?", match))
-            .or(Arena.where("name ILIKE ?"), match)
+            .or(Arena.where("name ILIKE ?", match))
     end
 
     belongs_to :gm,

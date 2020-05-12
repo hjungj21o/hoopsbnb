@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     
     resources :bookings, only: [:show, :create, :destroy, :update]
     resource :session, only: [:create, :destroy]
+    get '/search', to: 'arenas#search'
   end
   root "static_pages#root"
 end

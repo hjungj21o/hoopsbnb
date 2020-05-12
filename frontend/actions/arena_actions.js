@@ -22,7 +22,7 @@ export const fetchArena = arenaId => dispatch => (
         .then(arena => dispatch(receiveArena(arena)))
 )
 
-export const fetchArenasOnSearchResults = (keyword, startDate, endDate) => dispatch => (
-    ArenasApiUtil.fetchArenasOnSearchResults(keyword, startDate, endDate)
+export const arenasSearch = (keyword, startDate, endDate) => dispatch => (
+    ArenasApiUtil.arenasSearch(keyword, startDate, endDate)
         .then(arenas => dispatch(receiveArenas(arenas)))
 )
