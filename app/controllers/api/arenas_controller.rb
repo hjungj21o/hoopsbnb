@@ -22,6 +22,6 @@ class Api::ArenasController < ApplicationController
     private
 
     def arena_params
-        params.require(:arenas).permit(:name, :address, :city, :gm_id, :description, :price, :lat, :lng)
+        params.require(:arenas).permit(:name, :address, :city, :gm_id, :description, :price, :lat, :lng, :keyword, :start_date, :end_date)
     end
 end

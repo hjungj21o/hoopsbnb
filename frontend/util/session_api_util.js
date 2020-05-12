@@ -27,7 +27,7 @@ export const demoLogin = () => (
         url: 'api/session',
         data: {
             user: {
-                username: 'thegoat23',
+                email: 'thegoat23@airjordan.com',
                 password: 'chicagobulls'
             }
         }

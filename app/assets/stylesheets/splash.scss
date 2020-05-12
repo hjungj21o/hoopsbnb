@@ -54,22 +54,3 @@
     height: 45px;
 }
 
-.splash-search-check-time {
-    display: flex;
-    width: 100%;
-}
-
-.splash-search-check-time > label input {
-    margin: 0 -5px 0 0;
-    width: 210px;
-    // width: fit-content;
-}
-
-.splash-search-check-time > label:last-child {
-    margin: 0 0 0 -5px;
-    border-top-left-radius: 0px;
-}
-
-#date-picker {
-    width: 100%;
-}

@@ -4,7 +4,7 @@ class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
+            email: '',
             password: '',
         };
 
@@ -36,7 +36,7 @@ class LoginForm extends React.Component {
 
     handleErrors() {
         let errors = this.props.errors.map((error, i) => {
-            return <li key={`error-${i}`}>{error}</li>
+            return <li className="message login-error" key={`error-${i}`}><i className="fas fa-exclamation-circle"></i> {error}</li>
         })
         return (
             <ul>
@@ -46,27 +46,39 @@ class LoginForm extends React.Component {
     }
 
     render() {
+
+
+        let loginErrorClass
+
+
+        this.props.errors.forEach(error => {
+            if (error.includes("and/or")) {
+                loginErrorClass = "rederrorclass";
+            }
+        });
+
         return (
             <div className="modal-form-container">
                 <form className="modal-form" onSubmit={this.handleSubmit}>
                     <div className="modal-close-x">
-                        <p onClick={this.props.closeModal} ><i class="fas fa-times"></i></p>
+                        <div onClick={this.props.closeModal} ><i className="fas fa-times"></i></div>
+                        <div className="sign-up-header">Log in</div>
                     </div>
-                    {this.handleErrors()}
                     <br></br>
+                    {this.handleErrors()}
                     <div className="modal-container">
                         <input
-                            className="signup-form"
+                            className={`signup-form login-form ${loginErrorClass}`}
                             type="text"
-                            placeholder='username'
-                            value={this.state.username}
-                            onChange={this.update('username')}
-                            name="username"
+                            placeholder='email'
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            name="email"
                         />
                     </div>
                     <div className="modal-container">
                         <input
-                            className="signup-form"
+                            className={`signup-form login-form ${loginErrorClass}`}
                             type="password"
                             placeholder='password'
                             value={this.state.password}
@@ -74,6 +86,7 @@ class LoginForm extends React.Component {
                             name="password"
                         />
                     </div>
+
                     <input type="submit" value="Log in" className="modal-submit-button" />
                     <div className="session-link">
                             <p className="session-link-text">Don't have an account? {this.props.otherForm}</p>

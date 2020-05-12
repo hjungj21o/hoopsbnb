@@ -1,4 +1,4 @@
-json.extract! user, :id, :username, :first_name, :last_name, :email, :booking_ids
+json.extract! user, :id, :first_name, :last_name, :email, :booking_ids
 
 
 

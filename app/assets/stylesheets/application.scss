@@ -74,11 +74,12 @@ ul {
 
 button {
   cursor: pointer;
+  outline: none;
 }
- 
-// div {
-//   border: red 1px solid;
-// }
+
+input {
+  outline: none;
+}
 
 #map-container {
   height: 100%;

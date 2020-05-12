@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SplashGreetingContainer from '../nav/splash_greeting_container';
 import 'react-dates/initialize';
-import { SingleDatePicker } from 'react-dates';
+import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
 class Splash extends React.Component {
@@ -10,12 +10,18 @@ class Splash extends React.Component {
         super(props)
 
         this.state = {
-            date: null,
-            focused: null
+            startDate: null,
+            endDate: null,
+            focusedInput: null,
+            keyword: "",
+            filteredOptions: [],
+            showOptions: false,
+            guests: 1
         }
     }
 
     render() {
+
         return (
             <>
             <header>
@@ -34,49 +40,35 @@ class Splash extends React.Component {
                                     className="splash-search-input"
                                     type="text"
                                     placeholder="Add city, landmark, or address"
+
                                 />
                             </label>
                             <label className="splash-search-label">
-                                SELECT DATE
-                                <SingleDatePicker
-                                    date={this.state.date} // momentPropTypes.momentObj or null
-                                    onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
-                                    focused={this.state.focused} // PropTypes.bool
-                                    onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+                                SELECT DATES
+                                <DateRangePicker
+                                    startDatePlaceholderText="Start date"
+                                    endDatePlaceholderText="End date"
+                                    block={true}
+                                    startDate={this.state.startDate}
+                                    startDateId="datepicker_start_search_form"
+                                    endDate={this.state.endDate}
+                                    endDateId="datepicker_end_search_form"
+                                    noBorder={false}
+                                    onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+                                    focusedInput={this.state.focusedInput}
+                                    onFocusChange={focusedInput => this.setState({ focusedInput })}
                                     numberOfMonths={1}
                                     hideKeyboardShortcutsPanel={true}
                                     id="date-picker" // PropTypes.string.isRequired,
                                 />
                             </label>
-                        <div className="splash-search-check-time">
-                            <label className="splash-search-label">
-                                CHECK IN TIME
-                                <input
-                                    className="splash-search-input"
-                                    type="time"
-                                />
-                            </label>
-                            <label className="splash-search-label">
-                                CHECK OUT TIME
-                                <input
-                                    className="splash-search-input"
-                                    type="time"
-                                />
-                            </label>
-                        </div>
-                        {/* <div className="splash-form-input">
-                            <label className="splash-search-label">
-                                TEAM OR SOLO?
-                                <button type="text" className="splash-search-button">Add Teammates</button>
-                            </label>
-                        </div> */}
                         <div className="splash-search-submit-button-div">
-                            <button className="splash-search-submit-button">
-                                <Link to="/arenas">
+                            <Link to="/arenas">
+                                <button className="splash-search-submit-button">
                                     <i className="fas fa-search" />
                                     Search
-                                </Link>
-                            </button>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

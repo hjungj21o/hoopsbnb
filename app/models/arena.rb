@@ -1,5 +1,21 @@
+# == Schema Information
+#
+# Table name: arenas
+#
+#  id          :bigint           not null, primary key
+#  address     :string           not null
+#  city        :string           not null
+#  gm_id       :integer          not null
+#  description :text             not null
+#  price       :integer          not null
+#  lat         :float            not null
+#  lng         :float            not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  name        :string           not null
+#
 class Arena < ApplicationRecord
-    validates :name, :address, :gm_id, :city, :description, :price, :lat, :lng, presence: true
+    validates :name, :address, :city, :description, :price, :lat, :lng, presence: true
 
     def self.in_bounds(bounds)
         # google map bounds will be in the following format:
@@ -14,6 +30,14 @@ class Arena < ApplicationRecord
             bounds[:southWest][:lng], 
             bounds[:northEast][:lng] 
         ])
+    end
+
+    def self.search_by_keyword(keyword)
+        match = "%#{keyword}%"
+        Arena.where("city ILIKE ?", match)
+            .or(Arena.where("address ILIKE ?", match))
+            .or(Arena.where("description ILIKE ?", match))
+            .or(Arena.where("name ILIKE ?"), match)
     end
 
     belongs_to :gm,

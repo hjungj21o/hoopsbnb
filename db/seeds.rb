@@ -13,12 +13,16 @@ Arena.destroy_all
 # Review.destroy_all
 User.destroy_all
 
-u1 = User.create(username: "ballislife", password: "starwars123", email: "ballislife@gmail.com", first_name: "Haejun", last_name: "Chung")
-u2 = User.create(username: "thegoat23", password: "chicagobulls", email: "thegoat23@airjordan.com", first_name: "Michael", last_name: "Jordan")
-u3 = User.create(username: "earthisflat", password: "brooklynnets", email: "kyrieirving@brooklynnets.com", first_name: "Kyrie", last_name: "Irving")
-u4 = User.create(username: "halfcourt3", password: "goldenstate", email: "stephencurry30@gsw.com", first_name: "Stephen", last_name: "Curry")
-u5 = User.create(username: "eurosteps", password: "houstonrockets", email: "jamesharden@houston.com", first_name: "James", last_name: "Harden")
-u6 = User.create(username: "shaqtinafool", password: "shaqisadj", email:"shaq@shaqtinafool.com", first_name: "Shaq", last_name: "O'neal")
+ActiveRecord::Base.connection.tables.each do |t|
+    ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
+
+u1 = User.create(password: "starwars123", email: "ballislife@gmail.com", first_name: "Haejun", last_name: "Chung", birth_date: Date.parse('1992-02-10'))
+u2 = User.create(password: "chicagobulls", email: "thegoat23@airjordan.com", first_name: "Michael", last_name: "Jordan", birth_date: Date.parse('1963-02-17'))
+u3 = User.create(password: "brooklynnets", email: "kyrieirving@brooklynnets.com", first_name: "Kyrie", last_name: "Irving", birth_date: Date.parse('1992-03-23'))
+u4 = User.create(password: "goldenstate", email: "stephencurry30@gsw.com", first_name: "Stephen", last_name: "Curry", birth_date: Date.parse('1988-03-14'))
+u5 = User.create(password: "houstonrockets", email: "jamesharden@houston.com", first_name: "James", last_name: "Harden", birth_date: Date.parse('1989-08-26'))
+u6 = User.create(password: "shaqisadj", email:"shaq@shaqtinafool.com", first_name: "Shaq", last_name: "O'neal", birth_date: Date.parse('1972-03-06'))
 
 a1 = Arena.create(
     name: "Spectrum Arena",
@@ -131,12 +135,12 @@ a7.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/rucker_park_in
 
 a8 = Arena.create(
     name: "Play on the classic parquet floors, or watch a movie on the Jumbotron",
-    address: "1708 Ocean Front Walk",
+    address: "100 Legendes Way",
     city: "Boston", 
     gm_id: u2.id, 
     price: 7500, 
-    lat: 33.9857132, 
-    lng: -118.4737105,
+    lat: 42.36635, 
+    lng: -71.0632275,
     description: "The award-winning state-of-the-art TD Garden is a year-round, 
     19,600-seat arena with a multi-million dollar high definition video scoreboard 
     and complete 360-degree LED technology."
@@ -190,6 +194,48 @@ a11 = Arena.create(
 )
 
 a11.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/bk_nets_index.jpg"), filename: "bk_nets_index.jpg")
+
+a12 = Arena.create(
+    name: "Overlooking the Hudson River!",
+    address: "Canal Street Basketball Court",
+    city: "New York", 
+    gm_id: u1.id, 
+    price: 65, 
+    lat: 40.7255805, 
+    lng: -74.0115533,
+    description: "Play ball and enjoy the scenary. Right below the Holland Tunnel, 
+    you just can't hate the view!"
+)
+
+a12.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/canal_street.png"), filename: "canal_street.png")
+
+a13 = Arena.create(
+    name: "Pier 2 Basketball - A Mecca in Brooklyn!",
+    address: "150 Furman St",
+    city: "Brooklyn", 
+    gm_id: u6.id, 
+    price: 150, 
+    lat: 40.6991044, 
+    lng: -73.9988601,
+    description: "One of the meccas of BK if you are a baller. If you get tired of playing ball,
+    enjoy some bocce, shuffleboard, or just relax and enjoy the scenary!"
+)
+
+a13.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/pier2.png"), filename: "pier2.png")
+
+a14 = Arena.create(
+    name: "10 Minutes UBER ride to Coney Island! Tons to do, plenty to see!",
+    address: "150 Furman St",
+    city: "Brooklyn", 
+    gm_id: u4.id, 
+    price: 200, 
+    lat: 40.5758781, 
+    lng: -73.9916215,
+    description: "Less than 10 minutes to Coney Island. A MUST-PLAY location if you're in Brooklyn.
+    Enjoy the aquarium, Coney Island, and the rest of BK after you're done playing!"
+)
+
+a14.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/kaiser_park.jpg"), filename: "kaiser_park.png")
 
 
 
