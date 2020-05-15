@@ -3,7 +3,7 @@ import ArenaIndex from '../arenas/arena_index';
 import ArenasListMap from '../map/arenas_list_map';
 import NonSplashGreetingContainer from '../nav/nonsplash_greeting_container'
 
-const Search = ( { arenas, fetchArenas, updateFilter } ) => {
+const Search = ( { arenas, fetchArenas, updateFilter, keyword } ) => {
     return (
         <>
         <header>
@@ -11,7 +11,7 @@ const Search = ( { arenas, fetchArenas, updateFilter } ) => {
         </header>
         <div className="arenas-map-container">
             <ArenaIndex arenas={arenas} fetchArenas={fetchArenas} />
-            <ArenasListMap arenas={arenas} updateFilter={updateFilter} />
+            <ArenasListMap arenas={arenas} updateFilter={updateFilter} keyword={keyword} />
         </div>
         </>
     )

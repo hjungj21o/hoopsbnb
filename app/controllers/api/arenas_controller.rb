@@ -1,9 +1,8 @@
 class Api::ArenasController < ApplicationController
 
     def index
-        debugger
         if params[:keyword]
-            @arenas = Arena.in_bounds(params[:filters]).search_by_keyword(params[:keyword])
+            @arenas = Arena.search_by_keyword(params[:keyword])
         else
             @arenas = Arena.in_bounds(params[:filters])
         end

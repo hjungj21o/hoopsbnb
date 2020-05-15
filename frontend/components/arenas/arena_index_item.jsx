@@ -35,7 +35,7 @@ const arenaIndexItem = ( { arena } ) => {
                         </div>
                         <div className="arenas-index-pricing">
                             <div className="dollars">${arena.price}</div> 
-                            <div className="per-hour">/ hour</div>
+                            <div className="per-hour">/ day</div>
                         </div>
                     </div>
                 </div>

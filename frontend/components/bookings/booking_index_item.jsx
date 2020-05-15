@@ -16,8 +16,9 @@ class bookingIndexItem extends React.Component {
 
     cancelBooking() {
         const userId = this.props.currentUser.id;
+        const fetchBookings = this.props.fetchBookings;
         this.props.destroyBooking(this.props.booking.id)
-            .then(() => dispatch(this.props.fetchBookings(userId)));
+            .then(() => fetchBookings(userId));
     }
 
 
@@ -42,8 +43,9 @@ class bookingIndexItem extends React.Component {
                     <div className="booking-confirmation-num">Confirmation #: {booking.id}</div>
                 </div>
                 <div className="booking-index-time">
-                    Date: {booking.date} | 
-                    Time: {booking.start_time} <i className="fas fa-arrow-right"/> {booking.end_time}
+                    Check-in Date: {booking.start_date}
+                    <br></br> 
+                    Check-out Date: {booking.end_date}
                 </div>
                 <button className="booking-cancel-button" onClick={this.cancelBooking}>
                     Cancel Booking

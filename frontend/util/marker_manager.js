@@ -35,4 +35,12 @@ export default class MarkerManager {
         delete this.markers[marker.arenaId];
     }
 
+    //this removes all markers, going to use this in componentDidUpdate in arenas_list_map
+    removeAllMarkers() {
+        Object.values(this.markers).forEach(marker => {
+            marker.setMap(null);
+        })
+        this.markers = {};
+    }
+
 }

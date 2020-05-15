@@ -1,7 +1,7 @@
 import React from 'react';
 import 'react-dates/initialize';
-import { SingleDatePicker } from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
+import { DateRangePicker } from 'react-dates';
+import './_datepicker.css';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
@@ -10,10 +10,9 @@ class ArenaShowBooking extends React.Component {
         super(props);
 
         this.state = {
-            date: null,
+            startDate: this.props.startDate,
+            endDate: this.props.endDate,
             focused: null,
-            startTime: "11:00",
-            endTime: "12:00",
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -22,15 +21,13 @@ class ArenaShowBooking extends React.Component {
         e.preventDefault();
         if (this.props.currentUser) {
             let arena_id = this.props.arena.id;
-            let start_time = this.state.startTime;
-            let end_time = this.state.endTime;
-            let newDate = moment(this.state.date).format('MM-DD-YYYY');
+            let startDate = moment(this.state.startDate).format('YYYY-MM-DD');
+            let endDate = moment(this.state.endDate).format('YYYY-MM-DD');
             let newBooking = {
                 hooper_id: this.props.currentUser.id,
                 arena_id,
-                date: newDate,
-                start_time,
-                end_time,
+                start_date: startDate,
+                end_date: endDate,
             };
             const history = this.props.history;
             const userId = this.props.currentUser.id;
@@ -55,7 +52,7 @@ class ArenaShowBooking extends React.Component {
             <form className="arenas-booking-form" onSubmit={this.handleSubmit}>
                 <div className="arenas-booking-pricing">
                     <div className="booking-dollars">${this.props.arena.price}</div>
-                    <div className="booking-per-hour">/ hour</div>
+                    <div className="booking-per-hour">/ day</div>
                 </div>
                 <div className="booking-rating">
                     <div className="booking-star">
@@ -64,44 +61,24 @@ class ArenaShowBooking extends React.Component {
                     </div>
                 </div>
                 <div className="booking-dates">
-                    <label className="booking-search-label">
-                        <div>
-                            <SingleDatePicker
-                                date={this.state.date} // momentPropTypes.momentObj or null
-                                onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
-                                focused={this.state.focused} // PropTypes.bool
-                                onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
-                                numberOfMonths={1}
-                                hideKeyboardShortcutsPanel={true}
-                                id="booking-date-picker" // PropTypes.string.isRequired,
-                            />
-                        </div>
-                    </label>
-                </div>
-                <div className="booking-times booking-times-check-in">
-                    <label className="booking-search-label">
-                        Check-In 
-                            <input
-                        className="booking-search-input"
-                        placeholder="11:00"
-                        type="time"
+                    <DateRangePicker
+                        block={true}
+                        startDate={this.state.startDate}
+                        startDateId="datepicker_start_search_form"
+                        endDate={this.state.endDate}
+                        endDateId="datepicker_end_search_form"
+                        noBorder={false}
+                        onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+                        focusedInput={this.state.focusedInput}
+                        onFocusChange={focusedInput => this.setState({ focusedInput })}
+                        numberOfMonths={1}
+                        hideKeyboardShortcutsPanel={true}
+                        startDatePlaceholderText="Check-in"
+                        endDatePlaceholderText="Checkout"
+                        block={true}
+                        noBorder={false}
                     />
-                    </label>
                 </div>
-                <div className="booking-times booking-times-check-in">
-                    <label className="booking-search-label">
-                        Check-Out
-                                <input
-                            className="booking-search-input"
-                            type="time"
-                        />
-                    </label>
-                </div>
-                {/* <div className="booking-form-input">
-                    <label className="booking-search-label">
-                        <button className="booking-search-input">Add Teammates</button>
-                    </label>
-                </div> */}
                 <div className="booking-reserve-button">
                     {bookingHasUser}
                     <p>You won't be charged. Pinky promise.</p>

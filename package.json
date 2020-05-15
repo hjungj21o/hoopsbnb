@@ -20,7 +20,9 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "css-loader": "^3.5.2",
+    "styles-loader": "^2.0.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -41,8 +43,5 @@
     "node": "12.5.0",
     "npm": "6.9.0"
   },
-  "devDependencies": {
-    "css-loader": "^3.5.2",
-    "styles-loader": "^2.0.0"
-  }
+  "devDependencies": {}
 }

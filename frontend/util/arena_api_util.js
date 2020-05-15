@@ -1,10 +1,10 @@
-export const fetchArenas = filters => (
-    $.ajax ({
+export const fetchArenas = filters => {
+    return $.ajax ({
         method: 'GET',
         url: 'api/arenas',
         data: { filters }
     })
-);
+};
 
 export const fetchArena = arenaId => (
     $.ajax({
@@ -14,7 +14,7 @@ export const fetchArena = arenaId => (
 );
 
 export const arenasSearch = (keyword, startDate, endDate) => {
-    debugger;
+    ;
     return $.ajax({
         method: 'GET',
         url: '/api/arenas',

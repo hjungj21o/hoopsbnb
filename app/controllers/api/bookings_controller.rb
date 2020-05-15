@@ -44,6 +44,6 @@ class Api::BookingsController < ApplicationController
     private
 
     def booking_params
-        params.require(:booking).permit(:hooper_id, :arena_id, :date, :start_time, :end_time)
+        params.require(:booking).permit(:hooper_id, :arena_id, :start_date, :end_date, :hoopers)
     end
 end

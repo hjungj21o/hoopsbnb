@@ -14,12 +14,10 @@ class SearchBar extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
 
         this.props.arenasSearch(this.state.keyword)
-            .then(this.props.history.push("/arenas/search"));
-        debugger;
+            .then(() => this.props.history.push("/arenas"))
     }
 
     searchUpdate(e) {

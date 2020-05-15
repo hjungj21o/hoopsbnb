@@ -4,6 +4,7 @@ import SplashGreetingContainer from '../nav/splash_greeting_container';
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
+import HoopersDropDown from "../bookings/hoopers_dropdown";
 
 class Splash extends React.Component {
     constructor(props) {
@@ -16,12 +17,16 @@ class Splash extends React.Component {
             keyword: "",
             filteredOptions: [],
             showOptions: false,
-            guests: 1
+            hoopers: 1
         }
+        this.numHoopers = this.numHoopers.bind(this);
+    }
+
+    numHoopers(n) {
+        this.setState({ hoopers: n });
     }
 
     render() {
-
         return (
             <>
             <header>
@@ -40,7 +45,6 @@ class Splash extends React.Component {
                                     className="splash-search-input"
                                     type="text"
                                     placeholder="Add city, landmark, or address"
-
                                 />
                             </label>
                             <label className="splash-search-label">
@@ -59,8 +63,11 @@ class Splash extends React.Component {
                                     onFocusChange={focusedInput => this.setState({ focusedInput })}
                                     numberOfMonths={1}
                                     hideKeyboardShortcutsPanel={true}
-                                    id="date-picker" // PropTypes.string.isRequired,
                                 />
+                            </label>
+                            <label>
+                                HOOPERS
+                                <HoopersDropDown arrowType="bookingArrow" numHoopers={this.numHoopers} />
                             </label>
                         <div className="splash-search-submit-button-div">
                             <Link to="/arenas">

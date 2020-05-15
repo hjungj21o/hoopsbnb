@@ -6,7 +6,8 @@ import { updateFilter } from '../../actions/filter_actions';
 
 const msp = state => {
     return {
-        arenas: Object.values(state.entities.arenas)
+        arenas: Object.values(state.entities.arenas),
+        keyword: null
     };
 };
 

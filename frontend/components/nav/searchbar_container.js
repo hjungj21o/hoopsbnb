@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 
 
 const mdp = dispatch => {
-    debugger;
     return ({
         arenasSearch: (keyword) => dispatch(arenasSearch(keyword))
     })
