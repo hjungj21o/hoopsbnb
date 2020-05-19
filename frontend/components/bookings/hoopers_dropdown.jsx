@@ -26,14 +26,12 @@ class HoopersDropdown extends React.Component {
         }
     }
 
-    increaseHoopers(e) {
-        e.preventDefault();
+    increaseHoopers() {
         this.setState({ hoopers: this.state.hoopers + 1 });
         this.props.numHoopers(this.state.hoopers + 1);
     }
 
-    decreaseHoopers(e) {
-        e.preventDefault();
+    decreaseHoopers() {
         if (this.state.hoopers > 0) {
             this.setState({ hoopers: this.state.hoopers - 1 });
             this.props.numHoopers(this.state.hoopers - 1);

@@ -1,4 +1,5 @@
 import * as ArenasApiUtil from '../util/arena_api_util';
+import { setKeyword } from './keyword_actions';
 export const RECEIVE_ARENAS = 'RECEIVE_ARENAS';
 export const RECEIVE_ARENA = 'RECEIVE_ARENA;'
 
@@ -22,7 +23,9 @@ export const fetchArena = arenaId => dispatch => (
         .then(arena => dispatch(receiveArena(arena)))
 )
 
-export const arenasSearch = (keyword, startDate, endDate) => dispatch => (
-    ArenasApiUtil.arenasSearch(keyword, startDate, endDate)
-        .then(arenas => dispatch(receiveArenas(arenas)))
-)
+export const arenasSearch = (keyword, startDate, endDate) => dispatch => {
+    debugger;
+    dispatch(setKeyword(keyword));
+    return ArenasApiUtil.arenasSearch(keyword, startDate, endDate)
+    .then(arenas => dispatch(receiveArenas(arenas)))
+}

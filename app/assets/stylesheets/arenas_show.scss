@@ -220,9 +220,7 @@
 }
 
 .guestsSelect:focus {
-  outline-color: rgb(0, 133, 137);
-  outline-style: solid;
-  outline-width: 1px;
+  box-shadow: 0 0 0 1pt rgb(0, 133, 137);
 }
 
 .guestsSelect {
@@ -235,9 +233,10 @@
   text-indent: 10px;
   height: 45px;
   border-radius: 5px;
-  border: 1px solid rgb(235,235,235);
+  border: 1px solid #dbdbdb;
   margin-top: 10px;
 }
+
 .guestChange:active {
   transition: .3s;
   box-shadow: 0 0 2px 2px rgb(113,113,113);
@@ -262,12 +261,12 @@
 .guestsUl li {
   margin-top: 10px;
   display: flex;
-  
 }
 
 .guestsUl {
   border: 1px solid rgb(242,242,242);
-  margin-top: -17px;
+  margin: -17px 0 10px 0;
+    width: 95%;
 }
 
 .bookingArrow {
@@ -276,6 +275,7 @@
   font-weight: 100;
   position: relative;
   top: -30px;
+  right: -85%;
   pointer-events: none;
 }
 

@@ -20,10 +20,25 @@ class Splash extends React.Component {
             hoopers: 1
         }
         this.numHoopers = this.numHoopers.bind(this);
+        this.searchUpdate = this.searchUpdate.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        this.props.arenasSearch(this.state.keyword)
+            .then(() => this.props.history.push("/arenas"))
     }
 
     numHoopers(n) {
         this.setState({ hoopers: n });
+    }
+
+    searchUpdate(e) {
+        e.preventDefault();
+
+        this.setState({ keyword: e.currentTarget.value });
     }
 
     render() {
@@ -36,15 +51,19 @@ class Splash extends React.Component {
                 <div className="splash-form-container">
                     <div className="splash-form-title">
                         Find places to hoop anytime, anywhere.
-                        So, did you pack your shoes?</div>
+                        So, did you pack your shoes?
+                    </div>
                     <br/>
                     <div className="splash-form-input">
+                        <form onSubmit={this.handleSubmit}>
                             <label className="splash-search-label">
                                 LOCATION
                                 <input
                                     className="splash-search-input"
                                     type="text"
-                                    placeholder="Add city, landmark, or address"
+                                    placeholder="Try 'New York'"
+                                    value={this.state.keyword}
+                                    onChange={this.searchUpdate}
                                 />
                             </label>
                             <label className="splash-search-label">
@@ -69,14 +88,13 @@ class Splash extends React.Component {
                                 HOOPERS
                                 <HoopersDropDown arrowType="bookingArrow" numHoopers={this.numHoopers} />
                             </label>
-                        <div className="splash-search-submit-button-div">
-                            <Link to="/arenas">
+                            <div className="splash-search-submit-button-div">
                                 <button className="splash-search-submit-button">
                                     <i className="fas fa-search" />
                                     Search
                                 </button>
-                            </Link>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
