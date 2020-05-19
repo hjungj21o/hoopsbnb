@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import SplashGreetingContainer from '../nav/splash_greeting_container';
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
-// import './_datepicker.css';
+import './datepicker_override.css';
 import HoopersDropDown from "../bookings/hoopers_dropdown";
 
 class Splash extends React.Component {
