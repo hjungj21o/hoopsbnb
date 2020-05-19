@@ -67,7 +67,7 @@ class Splash extends React.Component {
                                 />
                             </label>
                             <label className="splash-search-label">
-                                SELECT DATES
+                                <span className="dates-span">SELECT DATES</span>
                                 <DateRangePicker
                                     startDatePlaceholderText="Start date"
                                     endDatePlaceholderText="End date"

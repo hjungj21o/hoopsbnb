@@ -749,7 +749,7 @@
   background: #f2f2f2
 }
 .DateRangePickerInput__withBorder {
-  width: 95%;
+  width: 95%; 
   border-radius: 5px;
   border: 1px solid #dbdbdb
 }
@@ -772,6 +772,7 @@
 }
 .DateRangePickerInput_arrow_svg {
   vertical-align: middle !important;
+  margin-left: 20px;
   fill: #484848;
   height: 24px !important;
   width: 24px !important;
