@@ -742,8 +742,8 @@
   fill: transparent
 }
 .DateRangePickerInput {
-  background-color: #fff;
-  display: flex;
+  background-color: #fff !important;
+  display: flex !important;
 }
 .DateRangePickerInput__disabled {
   background: #f2f2f2
@@ -771,10 +771,10 @@
   display: flex;
 }
 .DateRangePickerInput_arrow_svg {
-  vertical-align: middle;
+  vertical-align: middle !important;
   fill: #484848;
-  height: 24px;
-  width: 24px;
+  height: 24px !important;
+  width: 24px !important;
 
 }
 .DateRangePickerInput_clearDates {
