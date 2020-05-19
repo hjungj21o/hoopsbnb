@@ -59,7 +59,7 @@ a2.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/driveway_hoops
 a3 = Arena.create(
     name: "Welcome to the Cage!",
     address: "320 6th Ave", 
-    city: "New York", 
+    city: "Manhattan", 
     gm_id: u5.id, 
     price: 30, 
     lat: 40.731376, 
@@ -91,7 +91,7 @@ a4.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/venice_beach_i
 a5 = Arena.create(
     name: "Play bball at the heart of Central Park",
     address: "Great Lawn Oval",
-    city: "New York", 
+    city: "Manhattan", 
     gm_id: u3.id, 
     price: 55,
     lat: 40.7812648, 
@@ -105,7 +105,7 @@ a5.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/central_park_i
 a6 = Arena.create(
     name: "Come do some windmills and impress the crowd!",
     address: "Nagle Ave & W 204th Street", 
-    city: "New York", 
+    city: "Manhattan", 
     gm_id: u4.id, 
     price: 100, 
     lat: 40.8628381, 
@@ -119,7 +119,7 @@ a6.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/dyckman_park_i
 a7 = Arena.create(
     name: "Get your professional contract here",
     address: "280 W 155th St",
-    city: "New York", 
+    city: "Manhattan", 
     gm_id: u4.id, 
     price: 1000,
     lat: 40.8291747, 
@@ -151,7 +151,7 @@ a8.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/td_garden_inde
 a9 = Arena.create(
     name: "Heart of New York - MSG!",
     address: "4 Pennsylvania Plaza",
-    city: "New York", 
+    city: "Manhattan", 
     gm_id: u6.id, 
     price: 10000, 
     lat: 40.7502277, 
@@ -167,7 +167,7 @@ a9.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/msg_index.jpg"
 a10 = Arena.create(
     name: "Take Flight @ Jordan Terminal 23",
     address: "145 W 32nd St",
-    city: "New York", 
+    city: "Manhattan", 
     gm_id: u2.id, 
     price: 900, 
     lat: 40.7493709, 
@@ -198,7 +198,7 @@ a11.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/bk_nets_index
 a12 = Arena.create(
     name: "Overlooking the Hudson River!",
     address: "Canal Street Basketball Court",
-    city: "New York", 
+    city: "Manhattan", 
     gm_id: u1.id, 
     price: 65, 
     lat: 40.7255805, 
@@ -236,6 +236,77 @@ a14 = Arena.create(
 )
 
 a14.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/kaiser_park.jpg"), filename: "kaiser_park.png")
+
+a15 = Arena.create(
+    name: "Right next to the JFK - Earplugs A MUST",
+    address: "John F. Kennedy Airport",
+    city: "Queens",
+    gm_id: u5.id,
+    price: 10,
+    lat: 40.6403779,
+    lng: -73.8061072,
+    description: "Just landed? Flight delayed but want to ball? Say no more fam.
+    Get changed, walk over to my parking lot, and you can ball to your heart's content."
+)
+
+a15.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/jfk_bball_cropped.jpg"), filename: "jfk_bball_cropped.jpg")
+
+a16 = Arena.create(
+    name: "Play among flowers @ Queens Botanical Garden",
+    address: "43-50 Main St",
+    city: "Queens",
+    gm_id: u1.id,
+    price: 30,
+    lat: 40.7504225,
+    lng: -73.8323435,
+    description: "Forget about your allergies. You'll want to suit up and play next to our
+    beautiful botanical garden. Don't miss the chance of your life to play here!"
+)
+
+a16.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/queens_botanical.png"), filename: "queens_botanical.png")
+
+a17 = Arena.create(
+    name: "A MUST SEE IF YOU'RE A METS FAN",
+    address: "41 Seaver Way",
+    city: "Queens",
+    gm_id: u2.id,
+    price: 3000,
+    lat: 40.7147653,
+    lng: -73.8840339,
+    description: "Play some bball with the entire stadium to yourself. What more can you ask for?"
+)
+
+a17.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/citi_field.png"), filename: "citi_field.png")
+
+a18 = Arena.create(
+    name: "Play @ Yankee Stadium!",
+    address: "1 E 161 St",
+    city: "Bronx",
+    gm_id: u6.id,
+    price: 15000,
+    lat: 40.8278884,
+    lng: -73.9223607,
+    description: "If you're a Yankee fan, this should be on your bucket list. What are you waiting for?
+    Book with us now to experience something you'd never forget."
+)
+
+a18.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/yankee_stadium.png"), filename: "yankee_stadium.png")
+
+a19 = Arena.create(
+    name: "Staten Island Zoo! Tickets to zoo included",
+    address: "614 Broadway",
+    city: "Staten Island",
+    gm_id: u6.id,
+    price: 80,
+    lat: 40.611068,
+    lng: -74.1655338,
+    description: "Tickets to the zoo included. Spend some quality time ballin', and cool down while you walk around the zoo!"
+)
+
+a19.photos.attach(io: open("https://hoopsbnb-seed.s3.amazonaws.com/staten_zoo.png"), filename: "staten_zoo.png")
+
+
+
 
 
 

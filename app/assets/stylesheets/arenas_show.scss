@@ -219,11 +219,11 @@
     width: 50px;
 }
 
-.guestsSelect:focus {
+.hoopersSelect:focus {
   box-shadow: 0 0 0 1pt rgb(0, 133, 137);
 }
 
-.guestsSelect {
+.hoopersSelect {
   width: 95%;
   font-size: 16px;
   color: rgb(113,113,113);
@@ -237,12 +237,12 @@
   margin-top: 10px;
 }
 
-.guestChange:active {
+.hooperChange:active {
   transition: .3s;
   box-shadow: 0 0 2px 2px rgb(113,113,113);
 }
 
-.guestsUl li button{
+.hoopersUl li button{
   margin-right: 10px;
   font-size: 18px;
   display: inline-block;
@@ -258,12 +258,13 @@
   
 }
 
-.guestsUl li {
+.hoopersUl li {
   margin-top: 10px;
   display: flex;
+  justify-content: space-between;
 }
 
-.guestsUl {
+.hoopersUl {
   border: 1px solid rgb(242,242,242);
   margin: -17px 0 10px 0;
     width: 95%;
@@ -279,19 +280,20 @@
   pointer-events: none;
 }
 
-.guestsUl li div{
-  font-size: 16px;
-  margin-left: 5px;
-  display: inline-block;
+.plusminus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
 }
 
-.guestsUl li p{
-  font-size: 16px;
-  margin-left: 7px;
-  display: inline-block;
-  margin-right: 10px;
-  position: relative;
-  bottom: -4px;
+.plusminus p {
+    text-align: center;
+    padding: 0 10px 0 5px;
+}
+
+.hoopersChange {
+    text-align: center;
 }
 
 #minusDisabled {

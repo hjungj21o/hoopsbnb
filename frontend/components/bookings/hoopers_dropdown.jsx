@@ -15,12 +15,13 @@ class HoopersDropdown extends React.Component {
     }
 
     toggleDropdown(e) {
-        this.setState({ open: !this.state.open });
+        e.preventDefault();
+        this.setState({ open: true });
     }
 
     toggleDropdownBlur(e) {
         if (this.state.open === true) {
-            if (e.relatedTarget === null || (e.relatedTarget.className != "guestsnavbarDiv" && e.relatedTarget.className != "guestChange")) {
+            if (e.relatedTarget === null || (e.relatedTarget.className != "hoopersnavbarDiv" && e.relatedTarget.className != "hoopersChange")) {
                 this.setState({ open: !this.state.open });
             }
         }
@@ -56,16 +57,20 @@ class HoopersDropdown extends React.Component {
         else if (this.state.hoopers > 1) {
             hooperNum = `${this.state.hoopers} Hoopers`
         }
+
         return (
-            <div className="guestsnavbarDiv" onBlur={this.toggleDropdownBlur} onClick={this.toggleDropdown} tabIndex="0">
-                <button className="guestsSelect" onClick={(e) => e.preventDefault()}>{hooperNum}</button>
+            <div className="hoopersnavbarDiv" onBlur={this.toggleDropdownBlur} onClick={this.toggleDropdown} tabIndex="0">
+                <button className="hoopersSelect" onClick={(e) => e.preventDefault()}>{hooperNum}</button>
                 <div className={this.props.arrowType}>{icon}</div>
                 {this.state.open && (
-                    <ul className="guestsUl" >
-                        <li> <div>Hoopers</div>
-                            <button className="guestChange" id={minusDisabled} onClick={this.decreaseHoopers}>-</button>
-                            <p> {this.state.hoopers}+ </p>
-                            <button className="guestChange" onClick={this.increaseHoopers}>+</button>
+                    <ul className="hoopersUl" >
+                        <li> 
+                            <div>Hoopers</div>
+                            <div className="plusminus">
+                                <button className="hoopersChange" id={minusDisabled} onClick={this.decreaseHoopers}>-</button>
+                                <p> {this.state.hoopers}+ </p>
+                                <button className="hoopersChange" onClick={this.increaseHoopers}>+</button>
+                            </div>
                         </li>
                     </ul>
                 )}

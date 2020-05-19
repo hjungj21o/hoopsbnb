@@ -24,7 +24,6 @@ export const fetchArena = arenaId => dispatch => (
 )
 
 export const arenasSearch = (keyword, startDate, endDate) => dispatch => {
-    debugger;
     dispatch(setKeyword(keyword));
     return ArenasApiUtil.arenasSearch(keyword, startDate, endDate)
     .then(arenas => dispatch(receiveArenas(arenas)))

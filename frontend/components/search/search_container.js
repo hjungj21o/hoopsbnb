@@ -6,7 +6,6 @@ import { updateFilter } from '../../actions/filter_actions';
 import { deleteKeyword } from '../../actions/keyword_actions'
 
 const msp = state => {
-    debugger
     return {
         arenas: Object.values(state.entities.arenas),
         keyword: state.ui.keyword
