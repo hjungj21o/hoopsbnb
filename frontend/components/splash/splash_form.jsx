@@ -61,7 +61,7 @@ class Splash extends React.Component {
                                 <input
                                     className="splash-search-input"
                                     type="text"
-                                    placeholder="Try 'New York'"
+                                        placeholder="Manhattan, Brooklyn, Bronx...'"
                                     value={this.state.keyword}
                                     onChange={this.searchUpdate}
                                 />

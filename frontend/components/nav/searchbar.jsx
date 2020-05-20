@@ -33,7 +33,7 @@ class SearchBar extends React.Component {
                     <input 
                         className="nav-search-bar" 
                         type="text"
-                        placeholder="Try 'New York'"
+                        placeholder="Manhattan, Brooklyn, Bronx'"
                         value={this.state.keyword}
                         onChange={this.searchUpdate}
                     />
