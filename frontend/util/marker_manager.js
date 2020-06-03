@@ -21,12 +21,28 @@ export default class MarkerManager {
 
     createMarkerFromArena(arena) {
         const arenaLatLng = new google.maps.LatLng(arena.lat, arena.lng);
+        const contentString = `<img id="firstHeading" class="firstHeading" src=${arena.photoUrls[0]} width="200" height="150"/>` +
+            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'
+        window.infoWindow = new google.maps.InfoWindow({
+            content: contentString,
+            disableAutoPan: true
+        });
 
         const marker = new google.maps.Marker({
             position: arenaLatLng,
             map: this.map,
             arenaId: arena.id
         });
+        
+        marker.addListener('click', function() {
+            window.infoWindow.setContent(contentString);
+            window.infoWindow.open(this.map, marker);
+        });
+
+        this.map.addListener('click', function () {
+           if (window.infoWindow) window.infoWindow.close();
+        });
+
         this.markers[marker.arenaId] = marker;
     };
 

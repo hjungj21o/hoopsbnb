@@ -99,20 +99,20 @@ class ArenaShow extends React.Component {
                                     />
                                 </div>
                                 <div className="arena-sub-pic">
-                                        <img
-                                            src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_2_cropped.jpg"
-                                            alt="alt-photo-3"
-                                        />
+                                    <img
+                                        src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_2_cropped.jpg"
+                                        alt="alt-photo-3"
+                                    />
                                 </div>
                                 <div className="arena-sub-pic">
                                     <img
-                                            src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_3_cropped.jpg"
+                                        src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_3_cropped.jpg"
                                         alt="alt-photo-4"
                                     />
                                 </div>
                                 <div className="arena-sub-pic">
                                     <img
-                                            src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_4_cropped_2.jpg"
+                                        src="https://hoopsbnb-seed.s3.amazonaws.com/other_bball_court_4_cropped_2.jpg"
                                         alt="alt-photo-4"
                                     />
                                 </div>
